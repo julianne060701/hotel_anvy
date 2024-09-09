@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HelloWorldController;
+use App\Http\Controllers\UserManagementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('dashboard');
+})->name('default');
+
+Route::controller(UserManagementController::class)->group(function(){
+    Route::get('/UserManagement', 'getUserManagementView')->name('UserManagementView');
 });
+
+
 
 

@@ -8,7 +8,8 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="resources/plugins/fontawesome-free/css/all.min.css">
+  <!--<link rel="stylesheet" href="resources/plugins/fontawesome-free/css/all.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
@@ -25,6 +26,9 @@
   <link rel="stylesheet" href="resources/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="resources/plugins/summernote/summernote-bs4.min.css">
+
+  <!--Data Table-->
+  <link rel='stylesheet' href='https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.min.css'>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -45,6 +49,23 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+              <div class="container-fluid">
+                <div class="row mb-2">
+                  <div class="col-sm-6">
+                    <h1 class="m-0">@yield('Module')</h1>
+                  </div><!-- /.col -->
+                  <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item">@yield('Header')</a></li>
+                      <li class="breadcrumb-item ">@yield('Details')</li>
+                    </ol>
+                  </div><!-- /.col -->
+                </div><!-- /.row -->
+              </div><!-- /.container-fluid -->
+            </div>
         <!-- Small boxes (Stat box) -->
 
 
@@ -102,8 +123,10 @@
 <!-- AdminLTE App -->
 <script src="resources/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="resources/dist/js/demo.js"></script>
+<script src='https://cdn.datatables.net/2.1.5/js/dataTables.min.js'></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="resources/dist/js/pages/dashboard.js"></script>
+
+@yield('scripts');
 </body>
 </html>
