@@ -1,10 +1,10 @@
-@extends('layout.app')
+@extends('Admin.layout.app')
 @section('title', 'NEIL')
 @section('Navbar')
-    @include('components.Navbar')
+    @include('Admin.components.Navbar')
 @endsection
 @section('Sidebar')
-    @include('components.Sidebar')
+    @include('Admin.components.Sidebar')
 @endsection
 
 @section('Content')
@@ -29,5 +29,5 @@
 @endsection
 
 @section('Footer')
-    @include('components.Footer')
+    @include('Admin.components.Footer')
 @endsection
