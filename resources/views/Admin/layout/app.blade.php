@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>@yield('title')</title>
 
   <!-- Google Font: Source Sans Pro -->
@@ -107,8 +108,8 @@
 <!-- Sparkline -->
 <script src="resources/plugins/sparklines/sparkline.js"></script>
 <!-- JQVMap -->
-<script src="resourcesplugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="resourcesplugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="resources/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="resources/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
 <script src="resources/plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -129,4 +130,5 @@
 
 @yield('scripts');
 </body>
+
 </html>

@@ -21,6 +21,8 @@ Route::get('/', function () {
 
 Route::controller(UserManagementController::class)->group(function(){
     Route::get('/UserManagement', 'getUserManagementView')->name('UserManagementView');
+    Route::post('/updateUser', 'updateUser')->name('updateUser');
+    Route::post('/addUser', 'addUser')->name('addUser');
 });
 
 
