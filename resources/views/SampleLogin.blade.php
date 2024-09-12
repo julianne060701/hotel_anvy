@@ -15,9 +15,14 @@
         <label>Password</label>
         <input type="password" id="password" name="password">
         <button type="submit">Submit</button>
+        <div>
+            <input type="checkbox" name="remember" id="remember">
+            <label>Remember me</label>
+        </div>
 
     </form>
 
+    <!--This is where the errors from AuthController will reflect or displayed-->
     @if ($errors -> any())
         @foreach ($errors->all() as $error)
             {{$error}}

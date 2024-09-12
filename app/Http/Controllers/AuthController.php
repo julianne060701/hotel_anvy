@@ -18,8 +18,9 @@ class AuthController extends Controller
         ]);
 
         $credentials = $request->only(['email', 'password']);
+        $remember = $request->has('remember');
 
-        if(Auth::attempt($credentials)){
+        if(Auth::attempt($credentials, $remember)){
             return redirect()->route('default');
         };
         return redirect()->back()->withErrors(['username' => 'Login Failed']);
