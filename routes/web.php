@@ -24,6 +24,9 @@ Route::get('/', function () {
 
 Route::controller(IndexController::class)->group(function(){
     Route::get('/Home', 'index')->name('index');
+    Route::get('/Room', 'displayRoom')->name('Room');
+    Route::get('/AboutUs', 'displayAbout')->name('AboutUs');
+    Route::get('/ContactUs', 'displayContact')->name('ContactUs');
 });
 
 Route::controller(UserManagementController::class)->group(function(){

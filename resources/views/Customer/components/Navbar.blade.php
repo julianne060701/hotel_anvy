@@ -11,10 +11,10 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="about.html">Rooms</a></li>
-                            <li class="nav-item"><a class="nav-link" href="accomodation.html">About Us</a></li>
-                            <li class="nav-item"><a class="nav-link" href="gallery.html">Contact</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="{{route('index')}}">Home</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="{{route('Room')}}">Rooms</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('AboutUs')}}">About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('ContactUs')}}">Contact</a></li>
                             <!-- <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                                 <ul class="dropdown-menu">
