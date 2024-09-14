@@ -500,7 +500,9 @@ button:focus {
 }
 
 .banner_area .bg-parallax {
-  background-image: url("{{ asset('public/images/banner.jpg') }}") no-repeat scroll center 0/cover;
+  /* background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
   opacity: 0.50;
 }
 
