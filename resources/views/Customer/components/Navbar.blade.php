@@ -15,6 +15,7 @@
                             <li class="nav-item"><a class="nav-link" href="{{route('Room')}}">Rooms</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{route('AboutUs')}}">About Us</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{route('ContactUs')}}">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{{route('SLogin')}}">Login</a></li>
                             <!-- <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                                 <ul class="dropdown-menu">
