@@ -165,7 +165,7 @@
                 <div class="accommodation_item text-center">
                     <div class="hotel_img">
                         <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
-                        <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                        <a href="#" class="btn theme_btn button_hover">See Details</a>
                     </div>
                     <a href="#">
                         <h4 class="sec_h4">Double Deluxe Room</h4>
@@ -177,7 +177,7 @@
                 <div class="accommodation_item text-center">
                     <div class="hotel_img">
                         <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
-                        <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                        <a href="#" class="btn theme_btn button_hover">See Details  </a>
                     </div>
                     <a href="#">
                         <h4 class="sec_h4">Single Deluxe Room</h4>
