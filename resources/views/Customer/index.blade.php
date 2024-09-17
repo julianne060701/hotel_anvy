@@ -31,8 +31,9 @@
     <!-- main css -->
     <!-- <style> {{ file_get_contents(public_path('css/style.css')) }} </style> -->
     <link rel="stylesheet" href="{{ url('css/style.css') }}">
-    <link rel="stylesheet" href="{{ url('css/responsive.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url('css/responsive.css') }}"> -->
     <link rel="stylesheet" href="{{ url('css/index.css') }}">
+
 </head>
 
 <body>
@@ -52,82 +53,42 @@
                     <h6>Relax Your Mind</h6>
                     <h2>Anvy Resort Hotel</h2>
                     <p>Discover the Beauty of Anvy Resort Hotel</p>
-                    <a href="#" class="btn theme_btn button_hover">Get Started</a>
+                    <!-- <a href="#" class="btn theme_btn button_hover">Get Started</a> -->
                 </div>
             </div>
         </div>
-        <div class="hotel_booking_area position">
-            <div class="container">
-                <div class="hotel_booking_table">
-                    <div class="col-md-3">
-                        <h2>Book<br> Your Room</h2>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="boking_table">
-                            <div class="row">
-                                <!-- Calendar for Arrival and Departure -->
-                                <div class="col-md-4">
-                                    <div class="book_tabel_item">
-                                        <div class="form-group">
-                                            <div class='input-group date' id='datetimepicker11'>
-                                                <input type='text' class="form-control" placeholder="Arrival Date" />
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class='input-group date' id='datetimepicker1'>
-                                                <input type='text' class="form-control" placeholder="Departure Date" />
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Number of Adults, Children, and Babies -->
-                                <div class="col-md-4">
-                                    <div class="book_tabel_item">
-                                        <div class="input-group">
-                                            <select class="form-control">
-                                                <option value="" disabled selected>Select Adults</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4+</option>
-                                            </select>
-                                        </div>
-                                        <div class="input-group mt-3">
-                                            <select class="form-control">
-                                                <option value="" disabled selected>Select Children</option>
-                                                <option value="0">0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4+</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <!-- Number of Rooms -->
-                                <div class="col-md-4">
-                                    <div class="book_tabel_item">
-                                        <div class="input-group">
-                                            <input type="number" class="form-control" min="1"
-                                                placeholder="Number of Rooms" />
-                                        </div>
-                                        <a class="book_now_btn button_hover mt-3" href="#">Check Availabilty</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Room Booking Form -->
+        <div class="booking-form text-center">
+            <h3>BOOK YOUR ROOM</h3>
+            <form class="form-inline justify-content-center align-items-center">
+                <input type="date" class="form-control mr-2" placeholder="Arrival Date">
+                <input type="date" class="form-control mr-2" placeholder="Departure Date">
+                <select class="form-control mr-2">
+                    <option selected>Select Adults</option>
+                    <option value="1">1 Adult</option>
+                    <option value="2">2 Adults</option> 
+                </select>
+                <select class="form-control mr-2">
+                    <option selected>Select Children</option>
+                    <option value="0">0 Children</option>
+                    <option value="1">1 Child</option>
+                    <option value="2">2 Children</option>
+                </select>
+                <div class="d-flex align-items-center">
+                    <select class="form-control mr-2">
+                        <option selected>Number of Rooms</option>
+                        <option value="1">1 Room</option>
+                        <option value="2">2 Rooms</option>
+                    </select>
+                    <button class="book_now_btn button_hover btn" type="button"
+                        onclick="location.href='{{ route('Availability') }}'">
+                        Check Availability
+                    </button>
+                    
                 </div>
-            </div>
+            </form>
+
+
         </div>
     </section>
     <!--================Banner Area =================-->
@@ -153,43 +114,43 @@
         </div>
     </section>
     <!--================ Welcome Area  =================-->
-<!--================ Accommodation Area  =================-->
-<section class="accommodation_area section_gap">
-    <div class="container">
-        <div class="section_title text-center">
-            <h2 class="title_color">Room and Suites</h2>
-            <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,</p>
-        </div>
-        <div class="row mb_30">
-            <div class="col-lg-3 col-sm-6">
-                <div class="accommodation_item text-center">
-                    <div class="hotel_img">
-                        <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
-                        <a href="#" class="btn theme_btn button_hover">See Details</a>
-                    </div>
-                    <a href="#">
-                        <h4 class="sec_h4">Double Deluxe Room</h4>
-                    </a>
-                    <h5>$250<small>/night</small></h5>
-                </div>
+    <!--================ Accommodation Area  =================-->
+    <section class="accommodation_area section_gap">
+        <div class="container">
+            <div class="section_title text-center">
+                <h2 class="title_color">Room and Suites</h2>
+                <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,</p>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="accommodation_item text-center">
-                    <div class="hotel_img">
-                        <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
-                        <a href="#" class="btn theme_btn button_hover">See Details  </a>
+            <div class="row mb_30">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="accommodation_item text-center">
+                        <div class="hotel_img">
+                            <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
+                            <a href="#" class="btn theme_btn button_hover">See Details</a>
+                        </div>
+                        <a href="#">
+                            <h4 class="sec_h4">Double Deluxe Room</h4>
+                        </a>
+                        <h5>₱250<small>/night</small></h5>
                     </div>
-                    <a href="#">
-                        <h4 class="sec_h4">Single Deluxe Room</h4>
-                    </a>
-                    <h5>$200<small>/night</small></h5>
                 </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="accommodation_item text-center">
+                        <div class="hotel_img">
+                            <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
+                            <a href="#" class="btn theme_btn button_hover">See Details </a>
+                        </div>
+                        <a href="#">
+                            <h4 class="sec_h4">Single Deluxe Room</h4>
+                        </a>
+                        <h5>₱200<small>/night</small></h5>
+                    </div>
+                </div>
+
             </div>
-            
         </div>
-    </div>
-</section>
-<!--================ Accommodation Area  =================-->
+    </section>
+    <!--================ Accommodation Area  =================-->
 
     <!--================ Menu Area  =================-->
     <section class="latest_blog_area section_gap">
@@ -206,7 +167,7 @@
                             <img class="menu-img img-fluid" src="public/images/menus/menu1.jpg" alt="post">
                         </div>
                         <div class="details text-center">
-                            <h5>$250</h5>
+                            <h5>₱250</h5>
                             <a href="#">
                                 <h4 class="sec_h4">idk Salad</h4>
                             </a>
@@ -220,7 +181,7 @@
                             <img class="menu-img img-fluid" src="public/images/menus/menu2.jpg" alt="post">
                         </div>
                         <div class="details text-center">
-                            <h5>$250</h5>
+                            <h5>₱250</h5>
                             <a href="#">
                                 <h4 class="sec_h4">Cheezy Burger</h4>
                             </a>
@@ -234,7 +195,7 @@
                             <img class="menu-img img-fluid" src="public/images/menus/menu3.jpg" alt="post">
                         </div>
                         <div class="details text-center">
-                            <h5>$250</h5>
+                            <h5>₱250</h5>
                             <a href="#">
                                 <h4 class="sec_h4">Toast</h4>
                             </a>
@@ -304,34 +265,36 @@
     </section>
     <!--================ Facilities Area  =================-->
 
-  <!--================ About History Area  =================-->
-<section class="about_history_area section_gap">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- About Content Section -->
-            <div class="col-lg-6 col-md-12">
-                <div class="about_content">
-                    <h2 class="title title_color">About Us <br> Our History <br> Mission & Vision</h2>
-                    <p>
-                        We believe in delivering high-quality furniture with a focus on customization, 
-                        ensuring every piece perfectly suits your style and space. Our journey started with a vision to 
-                        revolutionize the way people experience furniture shopping. Over the years, we've evolved, 
-                        adapting to modern trends while maintaining our core values of integrity, quality, and craftsmanship.
-                    </p>
-                    <a href="#" class="button_hover theme_btn_two">Read More</a>
+    <!--================ About History Area  =================-->
+    <section class="about_history_area section_gap">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- About Content Section -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="about_content">
+                        <h2 class="title title_color">About Us <br> Our History <br> Mission & Vision</h2>
+                        <p>
+                            We believe in delivering high-quality furniture with a focus on customization,
+                            ensuring every piece perfectly suits your style and space. Our journey started with a vision
+                            to
+                            revolutionize the way people experience furniture shopping. Over the years, we've evolved,
+                            adapting to modern trends while maintaining our core values of integrity, quality, and
+                            craftsmanship.
+                        </p>
+                        <a href="#" class="button_hover theme_btn_two">Read More</a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- About Image Section -->
-            <div class="col-lg-6 col-md-12">
-                <div class="about_image">
-                    <img class="img-fluid rounded shadow-lg" src="public/images/about.jpg" alt="About Us Image">
+                <!-- About Image Section -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="about_image">
+                        <img class="img-fluid rounded shadow-lg" src="public/images/about.jpg" alt="About Us Image">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--================ About History Area  =================-->
+    </section>
+    <!--================ About History Area  =================-->
 
 
     <!--================ Testimonial Area  =================-->

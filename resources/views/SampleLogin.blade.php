@@ -61,7 +61,7 @@
 
         input[type="email"]:focus,
         input[type="password"]:focus {
-            border-color: #e50914;
+            border-color: #0099ff;
             outline: none;
         }
 
@@ -138,7 +138,7 @@
                 </label>
             </div>
             <button type="submit">Login</button>
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <p>Don't have an account? <a href="{{ route(name: 'SampleSignup') }}">Sign up</a></p>
         </form>
         <!--This is where the errors from AuthController will reflect or displayed-->
         @if ($errors->any())

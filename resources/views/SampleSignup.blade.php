@@ -46,6 +46,7 @@
             color: #ccc;
         }
 
+        input[type="text"],
         input[type="email"],
         input[type="password"] {
             width: 100%;
@@ -59,9 +60,10 @@
             color: #fff;
         }
 
+        input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="password"]:focus {
-            border-color: #e50914;
+            border-color: #0099ff;
             outline: none;
         }
 
@@ -120,9 +122,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>Login</h1>
+        <h1>Signup</h1>
         <form id="formAuthentication" method="POST" action="{{ route('loginPost') }}">
             @csrf
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>

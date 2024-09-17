@@ -1,8 +1,14 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AvailabilityController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\SignupController;
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
@@ -24,8 +30,17 @@ Route::get('/', function () {
 
 Route::controller(IndexController::class)->group(function(){
     Route::get('/Home', 'index')->name('index');
-    Route::get('/Room', 'displayRoom')->name('Room');
+});
+
+Route::controller(RoomController::class)->group(function(){
+    Route::get('/Room','displayRoom')->name('Room');
+});
+
+Route::controller(AboutUsController::class)->group(function(){
     Route::get('/AboutUs', 'displayAbout')->name('AboutUs');
+});
+
+Route::controller(ContactUsController::class)->group(function(){
     Route::get('/ContactUs', 'displayContact')->name('ContactUs');
 });
 
@@ -40,6 +55,16 @@ Route::controller(AuthController::class)->group(function(){
     Route::post('loginPost', 'loginPost')->name('loginPost');
 });
 
+Route::controller(SignupController::class)->group(function(){
+    Route::get('/SampleSignup','Signup')->name('SampleSignup');
 
+});
 
+Route::controller(AvailabilityController::class)->group(function(){
+    Route::get('/Availability','displayAvailability')->name('Availability');
+});
+
+Route::controller(BookController::class)->group(function(){
+    Route::get('/Book','Book')->name('Book');
+});
 

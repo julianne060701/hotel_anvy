@@ -174,7 +174,7 @@ button:focus {
 }
 
 .theme_btn:before {
-  background: #f8b100;
+  background: #0051ff;
 }
 
 .theme_btn:hover {
@@ -215,7 +215,7 @@ button:focus {
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
   z-index: -1;
-  background: #f8b100;
+  background: #064be0;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -246,7 +246,7 @@ button:focus {
 .book_now_btn {
   width: 100%;
   display: block;
-  background: #f3c300;
+  background: #0099ff;
   color: #222222;
   text-transform: uppercase;
   font-size: 14px;
@@ -665,21 +665,9 @@ button:focus {
   transform-origin: 0 0;
 }
 
-/*=========== breadcrumb_area css =============*/
-.breadcrumb_area {
-  position: relative;
-  padding: 172px 0px 84px;
-  background: #04091e;
-  z-index: 1;
-  overflow: hidden;
-}
 
-.breadcrumb_area .bg-parallax {
-  background: url("../image/about_banner.jpg") no-repeat scroll center 0/cover;
-  opacity: 0.50;
-  z-index: -1;
-}
 
+/* Styles for the page title */
 .page-cover-tittle {
   display: block;
   font-size: 36px;
@@ -687,10 +675,11 @@ button:focus {
   color: #fff;
 }
 
+/* Breadcrumb styling */
 .breadcrumb {
   text-align: center;
   background: transparent;
-  padding: 0px;
+  padding: 0;
   display: inline-block;
 }
 
@@ -704,15 +693,16 @@ button:focus {
 }
 
 .breadcrumb li + li:before {
-  content: "\e87a";
+  content: "\e87a"; /* Adjust if using a specific icon */
   font-family: 'Linearicons-Free';
   font-size: 14px;
   font-weight: 600;
   vertical-align: middle;
-  margin: 0px 10px 0px 7px;
+  margin: 0 10px 0 7px;
 }
 
 /*============= End banner_area css =============*/
+
 /*=============Blog Banner css =============*/
 .blog_banner {
   min-height: 780px;
