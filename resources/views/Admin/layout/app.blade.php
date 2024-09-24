@@ -151,6 +151,12 @@
 <script src="resources/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="resources/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- fullCalendar -->
+  <link rel="stylesheet" href="resources/plugins/fullcalendar/main.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="resources/dist/css/adminlte.min.css">
+
+  
 @yield('scripts');
 <script>
   $(function () {

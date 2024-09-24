@@ -14,6 +14,7 @@
                 <ul class="nav navbar-nav menu_nav ml-auto">
                     <li class="nav-item active"><a class="nav-link" href="{{route('index')}}">Home</a></li> 
                     <li class="nav-item"><a class="nav-link" href="{{route('Room')}}">Rooms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('AboutUs')}}">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{route('ContactUs')}}">Contact</a></li>
                 </ul>

@@ -71,7 +71,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('Rooms')}}" class="nav-link" id="rooms">
+                <a href="{{route('Rooms')}}" class="nav-link" id="room">
                 <i class="fas fa-door-open"></i>
                   <p>Rooms</p>
                 </a>
@@ -91,13 +91,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="menu.php" class="nav-link">
+            <a href="{{route('AdminMenu')}}" class="nav-link" id="adminmenu">
             <i class="nav-icon fas fa-utensils"></i>
               <p>Menu Management</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="booking.php" class="nav-link">
+            <a href="{{route('AdminBooking')}}" class="nav-link" id="adminbooking">
             <i class="nav-icon fas fa-calendar-alt"></i>
               <p>Booking</p>
             </a>
@@ -115,7 +115,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="loyalty.php" class="nav-link">
+            <a href="{{route('AdminLoyaltyCard')}}" class="nav-link" id="loyaltycard">
             <i class="nav-icon fas fa-credit-card"></i>
               <p>Loyalty Cards </p>
             </a>

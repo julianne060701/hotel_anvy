@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AdminBookingController;
+use App\Http\Controllers\AdminLoyaltyCardController;
+use App\Http\Controllers\AdminMenuController;
 use App\Http\Controllers\AdminRoomController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AvailabilityController;
@@ -59,6 +62,17 @@ Route::controller(AdminRoomController::class)->group(function(){
     Route::get('/Rooms','displayAdminRoom')->name('Rooms');
 });
 
+Route::controller(AdminMenuController::class)->group(function(){
+    Route::get('/AdminMenu','AdminMenu')->name('AdminMenu');
+});
+
+Route::controller(AdminLoyaltyCardController::class)->group(function(){
+    Route::get('/AdminLoyaltyCard','AdminLoyalty')->name('AdminLoyaltyCard');
+});
+
+Route::controller(AdminBookingController::class)->group(function(){
+    Route::get('/AdminBooking','AdminBooking')->name('AdminBooking');
+});
 
 Route::controller(UserManagementController::class)->group(function(){
     Route::get('/UserManagement', 'getUserManagementView')->name('UserManagementView');
