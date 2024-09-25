@@ -6,10 +6,8 @@ use Illuminate\Http\Request;
 
 class SignupController extends Controller
 {
-
-
     public function Signup(){
         return view('SampleSignUp');
     }
-    
+
 }

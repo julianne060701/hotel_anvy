@@ -5,12 +5,14 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RoomController;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\IndexController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,12 +26,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-})->name('default');
+
 
 Route::controller(IndexController::class)->group(function(){
-    Route::get('/Home', 'index')->name('index');
+    Route::get('/', 'index')->name('index');
 });
 
 Route::controller(RoomController::class)->group(function(){
@@ -51,7 +51,7 @@ Route::controller(UserManagementController::class)->group(function(){
 });
 
 Route::controller(AuthController::class)->group(function(){
-    Route::get('/SLogin', 'getSampleLoginView')->name('SLogin');
+    Route::get('/Login', 'getSampleLoginView')->name('SLogin');
     Route::post('loginPost', 'loginPost')->name('loginPost');
 });
 
@@ -67,4 +67,9 @@ Route::controller(AvailabilityController::class)->group(function(){
 Route::controller(BookController::class)->group(function(){
     Route::get('/Book','Book')->name('Book');
 });
+
+Route::controller(DashboardController::class)->group(function(){
+    Route::get('/Dashboard', 'getDashboard')->name('dashboard');
+});
+
 
