@@ -182,6 +182,12 @@
     <!--================ Menu Area  =================-->
 
     <!--================ Events Area  =================-->
+
+    
+
+    <!--================ Events Area  =================-->
+
+    <!--================ facilities Area  =================-->
     <section class="facilities_area section_gap">
         <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
         </div>
@@ -271,7 +277,7 @@
 
 
     <!--================ Testimonial Area  =================-->
-    <section class="testimonial_area section_gap">
+    <!-- <section class="testimonial_area section_gap">
         <div class="container">
             <div class="section_title text-center">
                 <h2 class="title_color">Testimonial from our Clients</h2>
@@ -298,7 +304,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--================ Testimonial Area  =================-->
 
 
@@ -311,18 +317,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- Required JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9/UABIMIIRRLP/XN44jW59Pq+EKxb61rPrBja"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap4-datetimepicker@5.2.3/build/js/bootstrap-datetimepicker.min.js"></script>
+
 
     <script type="text/javascript">
         $(function () {

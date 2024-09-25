@@ -9,27 +9,20 @@
     <title>Anvy Resort Hotel</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
-    <!-- other CSS files -->
-    <link rel="stylesheet" href="vendors/linericon/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <!-- other CS -->
+    <link rel="stylesheet" href="resources/vendors/linericon/style.css">
+    <link rel="stylesheet" href="resources/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="resources/vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="resources/vendors/owl-carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="vendors/linericon/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap4-datetimepicker@5.2.3/build/css/bootstrap-datetimepicker.min.css"
         rel="stylesheet">
-    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
     <!-- Main CSS -->
-    <link rel="stylesheet" href="{{ url('css/style.css') }}">
-    <link rel="stylesheet" href="{{ url('css/responsive.css') }}">
-
-    <link rel="stylesheet" href="{{ url('css/index.css') }}">
+    <link rel="stylesheet" href="{{ url('resources/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url('resources/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ url('resources/css/index.css') }}">
 
 </head>
     <style>
@@ -140,7 +133,22 @@
     </style>
 </head>
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> -->
+    <script src="resources/js/jquery-3.2.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/stellar.js"></script>
+    <script src="resources/js/jquery.ajaxchimp.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="resources/js/popper.js"></script>
+    <script src="resources/vendors/owl-carousel/owl.carousel.min.js"></script></script>
+<script src="resources/vendors/owl-carousel/owl.carousel.min.js"></script></script>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script> 
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9/UABIMIIRRLP/XN44jW59Pq+EKxb61rPrBja"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap4-datetimepicker@5.2.3/build/js/bootstrap-datetimepicker.min.js"></script>

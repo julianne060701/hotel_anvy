@@ -61,9 +61,9 @@
             </ul>
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item"  id="rooms">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-bed"></i>
+            <i class="nav-icon fas fa-house-user"></i>
               <p>
                 Room Management
                 <i class="fas fa-angle-left right"></i>
@@ -71,33 +71,33 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="rooms.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                <a href="{{route('Rooms')}}" class="nav-link" id="room">
+                <i class="fas fa-door-open"></i>
                   <p>Rooms</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="beds.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                <i class="nav-icon fas fa-bed"></i>
                   <p>Beds</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="amenities.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
+                  <i class="fas fa-concierge-bell"></i>
                   <p>Amenities </p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="menu.php" class="nav-link">
+            <a href="{{route('AdminMenu')}}" class="nav-link" id="adminmenu">
             <i class="nav-icon fas fa-utensils"></i>
               <p>Menu Management</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="booking.php" class="nav-link">
+            <a href="{{route('AdminBooking')}}" class="nav-link" id="adminbooking">
             <i class="nav-icon fas fa-calendar-alt"></i>
               <p>Booking</p>
             </a>
@@ -115,7 +115,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="loyalty.php" class="nav-link">
+            <a href="{{route('AdminLoyaltyCard')}}" class="nav-link" id="loyaltycard">
             <i class="nav-icon fas fa-credit-card"></i>
               <p>Loyalty Cards </p>
             </a>
