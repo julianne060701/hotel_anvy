@@ -87,43 +87,43 @@
         </div>
     </section>
     <!--================ Welcome Area  =================-->
-    <!--================ Accommodation Area  =================-->
-    <section class="accommodation_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Room and Suites</h2>
-                <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,</p>
+<!--================ Accommodation Area  =================-->
+<section class="accommodation_area section_gap">
+    <div class="container">
+        <div class="section_title text-center">
+            <h2 class="title_color">Room and Suites</h2>
+            <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,</p>
+        </div>
+        <div class="row mb_30">
+            <div class="col-lg-4 col-sm-6">
+                <div class="accommodation_item text-center">
+                    <div class="hotel_img">
+                        <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
+                        <a href="#" class="btn theme_btn button_hover">See Details</a>
+                    </div>
+                    <a href="#">
+                        <h4 class="sec_h4">Double Deluxe Room</h4>
+                    </a>
+                    <h5>₱250<small>/night</small></h5>
+                </div>
             </div>
-            <div class="row mb_30">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accommodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
-                            <a href="#" class="btn theme_btn button_hover">See Details</a>
-                        </div>
-                        <a href="#">
-                            <h4 class="sec_h4">Double Deluxe Room</h4>
-                        </a>
-                        <h5>₱250<small>/night</small></h5>
+            <div class="col-lg-4 col-sm-6">
+                <div class="accommodation_item text-center">
+                    <div class="hotel_img">
+                        <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
+                        <a href="#" class="btn theme_btn button_hover">See Details</a>
                     </div>
+                    <a href="#">
+                        <h4 class="sec_h4">Single Deluxe Room</h4>
+                    </a>
+                    <h5>₱200<small>/night</small></h5>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accommodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
-                            <a href="#" class="btn theme_btn button_hover">See Details </a>
-                        </div>
-                        <a href="#">
-                            <h4 class="sec_h4">Single Deluxe Room</h4>
-                        </a>
-                        <h5>₱200<small>/night</small></h5>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
-    <!--================ Accommodation Area  =================-->
+    </div>
+</section>
+<!--================ Accommodation Area  =================-->
+
 
     <!--================ Menu Area  =================-->
     <section class="latest_blog_area section_gap">
@@ -193,7 +193,7 @@
         </div>
         <div class="container">
             <div class="section_title text-center">
-                <h2 class="title_w">Events</h2>
+                <h2 class="title_w">Our Amenities</h2>
                 <p>Who are in extremely love with eco friendly system.</p>
             </div>
             <div class="row mb_30">
