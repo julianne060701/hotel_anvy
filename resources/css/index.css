@@ -262,3 +262,42 @@ body {
 .col-lg-4 {
     width: 33.33%; /* Three columns instead of four */
 }
+/* Events Carousel */
+.event-title-wrapper {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+  
+  .title_color {
+    font-size: 2.5rem; /* Adjust title size */
+    font-weight: bold;
+    color: #333; /* Adjust color to your preference */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Optional: Add some margin to the carousel itself */
+  #eventCarousel {
+    margin-top: 20px;
+  }
+  
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+  
+  .carousel-indicators button {
+    background-color: #fff;
+  }
+  
+  
