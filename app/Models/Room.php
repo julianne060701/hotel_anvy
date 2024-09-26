@@ -17,7 +17,14 @@ class Room extends Model
         'Rate',
         'Status',
         'Pts_earned',
-        'Pts_value'
+        'Pts_value',
+        'room_type',
+        'room_number'
     ];
+
+    //This is how you make an inner join
+    public function getBedType(){
+        return $this->belongsTo(Bed_Type::class, 'bed_type_id');
+    }
 
 }

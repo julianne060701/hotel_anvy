@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('Status');
             $table->integer('pts_earned');
             $table->integer('pts_value');
+            $table->string('room_type');
+            $table->integer('room_number');
             $table->timestamps();
         });
     }
