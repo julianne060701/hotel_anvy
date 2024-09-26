@@ -35,7 +35,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-            <a href="{{route('default')}}" class="nav-link" id="Blank_B">
+            <a href="{{route('dashboard')}}" class="nav-link" id="Blank_B">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                Dashboard
@@ -60,7 +60,7 @@
               </li>
             </ul>
           </li>
-        
+
           <li class="nav-item"  id="rooms">
             <a href="#" class="nav-link">
             <i class="nav-icon fas fa-house-user"></i>
@@ -142,7 +142,7 @@
                   <p>Income Reports</p>
                 </a>
               </li>
-             
+
             </ul>
           </li>
 
