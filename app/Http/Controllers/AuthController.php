@@ -11,7 +11,7 @@ class AuthController extends Controller
         return view('SampleLogin');
     }
 
-    public function loginPost(Request $request): mixed|RedirectResponse{
+    public function loginPost(Request $request){
         $request->validate([
             'email' => 'required',
             'password' => 'required'
