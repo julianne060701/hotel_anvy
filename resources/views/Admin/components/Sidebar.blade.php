@@ -77,7 +77,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="beds.php" class="nav-link">
+                <a href="{{route('Beds')}}" class="nav-link" id="bed">
                 <i class="nav-icon fas fa-bed"></i>
                   <p>Beds</p>
                 </a>

@@ -1,0 +1,98 @@
+@extends('Admin.layout.app')
+
+@section('title', 'Beds')
+
+@section('Navbar')
+@include('Admin.components.Navbar')
+@endsection
+
+@section('Sidebar')
+@include('Admin.components.Sidebar')
+@endsection
+
+@section('Module', 'Bed Management Module')
+@section('Header', 'Bed Data')
+@section('Details', 'User')
+
+@section('Content')
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-end mb-3">
+                <button class="btn btn-primary" data-bs-toggle="modal" id="add_btn" data-bs-target="#addRoomModal" style="width: 15%" id="add_btn">Add New</button>
+        </div>
+
+         <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Bed Type</th>
+                    <th>Date Added</th>
+                    <th>Action</th>
+                    <th class="d-none">ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($Bed as $b)
+                <tr class="text-center">
+                    <td>{{$b->type}}</td>
+                    <td>{{$b->created_at}}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary btnView"><i class="fas fa-pen"></i></button>
+                        <!-- <button class="btn btn-info btnView"><i class="fas fa-pen"></i>Edit</button> -->
+                        <button class="btn btn-sm btn-danger"> <i class="bi bi-trash"></i></i></button>
+                    </td>
+                </tr>
+                @endforeach
+
+            </tbody>
+        </table>
+         
+        <!-- Add Room Modal -->
+        <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="modalAddLabel">Add New Bed Type</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="BedAddForm">
+                            @csrf
+                            <div class="row">
+                                <div class="col-12">
+                                    <label for="type" class="form-label">Bed Type</label>
+                                    <input type="text" class="form-control" id="type" name="type" placeholder="Twin Bed" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+@endsection
+
+
+@section('Footer')
+@include('Admin.components.Footer')
+@endsection
+
+
+
+@section('scripts')
+<script>
+    $('#rooms').addClass('menu-open');
+    $('#bed').addClass('active');
+</script>
+
+
+<script src='resources/js/Bed.js'></script>
+@endsection
