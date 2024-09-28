@@ -1,5 +1,5 @@
 @extends('Admin.layout.app')
-@section('title', 'NEIL')
+@section('title', 'Admin Anvy')
 @section('Navbar')
     @include('Admin.components.Navbar')
 @endsection

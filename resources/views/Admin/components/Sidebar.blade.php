@@ -34,6 +34,15 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+               <li class="nav-item">
+            <a href="{{route('dashboard')}}" class="nav-link" id="Blank_B">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+               Dashboard
+                <!-- <span class="right badge badge-danger">New</span> -->
+              </p>
+            </a>
+          </li>
           <li class="nav-item " id="masterData">
             <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -49,17 +58,92 @@
                   <p>User</p>
                 </a>
               </li>
+            </ul>
+          </li>
 
+          <li class="nav-item"  id="rooms">
+            <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-house-user"></i>
+              <p>
+                Room Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('Rooms')}}" class="nav-link" id="room">
+                <i class="fas fa-door-open"></i>
+                  <p>Rooms</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="beds.php" class="nav-link">
+                <i class="nav-icon fas fa-bed"></i>
+                  <p>Beds</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="amenities.php" class="nav-link">
+                  <i class="fas fa-concierge-bell"></i>
+                  <p>Amenities </p>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('default')}}" class="nav-link" id="Blank_B">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{route('AdminMenu')}}" class="nav-link" id="adminmenu">
+            <i class="nav-icon fas fa-utensils"></i>
+              <p>Menu Management</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('AdminBooking')}}" class="nav-link" id="adminbooking">
+            <i class="nav-icon fas fa-calendar-alt"></i>
+              <p>Booking</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="payment.php" class="nav-link">
+            <i class="nav-icon fas fa-money-bill"></i>
+              <p>Payment Method</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="review.php" class="nav-link">
+            <i class="nav-icon fas fa-star"></i>
+              <p>Reviews & Rating</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('AdminLoyaltyCard')}}" class="nav-link" id="loyaltycard">
+            <i class="nav-icon fas fa-credit-card"></i>
+              <p>Loyalty Cards </p>
+            </a>
+          </li>
+          <li class="nav-header">Reports</li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-book"></i>
               <p>
-                Blank Boilerplate
-                <span class="right badge badge-danger">New</span>
+                Reports
+                <i class="fas fa-angle-left right"></i>
               </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="room_report.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Room Availability  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Income Reports</p>
+                </a>
+              </li>
+
+            </ul>
           </li>
 
         </ul>

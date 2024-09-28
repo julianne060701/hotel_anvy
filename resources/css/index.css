@@ -1,0 +1,245 @@
+/* form booking */
+body {
+    background-color: #f0f4f8;
+}
+.booking-form {
+    background-color: #1a1a2e;
+    padding: 30px;
+    color: #fff;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.booking-form h3 {
+    color: #f9f9f9;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.booking-form .form-control {
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.check-btn {
+    background-color: #ffb400;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px 24px;
+}
+.check-btn:hover {
+    background-color: #e6a100;
+}
+.room-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.room-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+.room-info {
+    padding-left: 20px;
+}
+.room-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.room-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffb400;
+}
+.booking-button {
+    background-color: #ffb400;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.booking-button:hover {
+    background-color: #e6a100;
+}
+
+.form-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.book_now_btn {
+    margin-top: 0;
+    margin-left: 10px; 
+}
+
+
+.book_now_btn.btn {
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+
+.form-control {
+    margin-bottom: 0; 
+}
+
+/* Menu CSS */
+
+.latest_blog_area {
+    padding: 60px 0;
+}
+
+.single-recent-blog-post {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.single-recent-blog-post:hover {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.menu-img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.details {
+    padding: 20px;
+}
+
+.details h5 {
+    color: #ff7f50;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.details h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.btn.theme_btn {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+}
+
+.btn.theme_btn:hover {
+    background-color: #ff4500;
+}
+
+.section_title h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.section_title p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.accommodation_area {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+}
+
+.section_title {
+    margin-bottom: 40px;
+}
+
+.section_title h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.section_title p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+}
+/* Accommodation CS */
+.accommodation_item {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.accommodation_item:hover {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.hotel_img {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hotel_img img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.hotel_img:hover img {
+    transform: scale(1.1);
+}
+
+.hotel_img .btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.hotel_img .btn:hover {
+    background-color: #ff4500;
+}
+
+.sec_h4 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 15px 0;
+}
+
+.accommodation_item h5 {
+    font-size: 1.2rem;
+    color: #ff7f50;
+}
+
+.accommodation_item h5 small {
+    font-size: 0.8rem;
+    color: #666;
+}

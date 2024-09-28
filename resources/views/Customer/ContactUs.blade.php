@@ -1,3 +1,4 @@
+@extends('Customer.layout.app')
 @section('Navbar')
     @include('Customer.components.Navbar')
 @endsection
@@ -5,45 +6,26 @@
     @include('Customer.components.Footer')
 @endsection
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="image/favicon.png" type="image/png">
-        <title>Royal Hotel</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <!-- resources not yet imported -->
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <!-- main css -->
-        <link rel="stylesheet" href="{{ url('css/style.css') }}">
-        <link rel="stylesheet" href="{{ url('css/responsive.css') }}">
-    </head>
+
     <body>
         <!--================Navigations Area =================-->
         @yield('Navbar')
         <!--================Navigations Area =================-->
         
         <!--================Breadcrumb Area =================-->
-        <section class="breadcrumb_area">
-            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background=""></div>
-            <div class="container">
-                <div class="page-cover text-center">
-                    <h2 class="page-cover-tittle">Contact Us</h2>
-                    <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Contact Us</li>
-                    </ol>
-                </div>
+    <section class="breadcrumb_area">
+        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0"></div>
+        <div class="container">
+            <div class="page-cover text-center">
+                <h2 class="page-cover-tittle">Contact Us</h2>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Contact Us</li>
+                </ol>
             </div>
-        </section>
-        <!--================Breadcrumb Area =================-->
+        </div>
+    </section>
+    <!--================Breadcrumb Area =================-->
         
         <!--================Contact Area =================-->
         <section class="contact_area section_gap">

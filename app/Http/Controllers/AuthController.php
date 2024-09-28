@@ -11,7 +11,7 @@ class AuthController extends Controller
         return view('SampleLogin');
     }
 
-    public function loginPost(Request $request){
+    public function loginPost(Request $request): mixed|RedirectResponse{
         $request->validate([
             'email' => 'required',
             'password' => 'required'
@@ -21,7 +21,7 @@ class AuthController extends Controller
         $remember = $request->has('remember');
 
         if(Auth::attempt($credentials, $remember)){
-            return redirect()->route('default');
+            return redirect()->route('dashboard');
         };
         return redirect()->back()->withErrors(['username' => 'Login Failed']);
     }

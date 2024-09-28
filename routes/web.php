@@ -1,10 +1,24 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AdminBookingController;
+use App\Http\Controllers\AdminLoyaltyCardController;
+use App\Http\Controllers\AdminMenuController;
+use App\Http\Controllers\AdminRoomController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AvailabilityController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HelloWorldController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LoyaltyController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\SignupController;
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\IndexController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,15 +32,46 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
-})->name('default');
+
 
 Route::controller(IndexController::class)->group(function(){
-    Route::get('/Home', 'index')->name('index');
-    Route::get('/Room', 'displayRoom')->name('Room');
+    Route::get('/', 'index')->name('index');
+});
+
+Route::controller(RoomController::class)->group(function(){
+    Route::get('/Room','displayRoom')->name('Room');
+});
+
+Route::controller(AboutUsController::class)->group(function(){
     Route::get('/AboutUs', 'displayAbout')->name('AboutUs');
+});
+
+Route::controller(ContactUsController::class)->group(function(){
     Route::get('/ContactUs', 'displayContact')->name('ContactUs');
+});
+
+Route::controller(ProfileController::class)->group(function(){
+    Route::get('/Profile','displayProfile')->name('Profile');
+});
+
+Route::controller(LoyaltyController::class)->group(function(){
+    Route::get('/LoyaltyCard','displayLoyaltyCard')->name('LoyaltyCard');
+});
+
+Route::controller(AdminRoomController::class)->group(function(){
+    Route::get('/Rooms','displayAdminRoom')->name('Rooms');
+});
+
+Route::controller(AdminMenuController::class)->group(function(){
+    Route::get('/AdminMenu','AdminMenu')->name('AdminMenu');
+});
+
+Route::controller(AdminLoyaltyCardController::class)->group(function(){
+    Route::get('/AdminLoyaltyCard','AdminLoyalty')->name('AdminLoyaltyCard');
+});
+
+Route::controller(AdminBookingController::class)->group(function(){
+    Route::get('/AdminBooking','AdminBooking')->name('AdminBooking');
 });
 
 Route::controller(UserManagementController::class)->group(function(){
@@ -36,10 +81,25 @@ Route::controller(UserManagementController::class)->group(function(){
 });
 
 Route::controller(AuthController::class)->group(function(){
-    Route::get('/SLogin', 'getSampleLoginView')->name('SLogin');
+    Route::get('/Login', 'getSampleLoginView')->name('SLogin');
     Route::post('loginPost', 'loginPost')->name('loginPost');
 });
 
+Route::controller(SignupController::class)->group(function(){
+    Route::get('/SampleSignup','Signup')->name('SampleSignup');
 
+});
+
+Route::controller(AvailabilityController::class)->group(function(){
+    Route::get('/Availability','displayAvailability')->name('Availability');
+});
+
+Route::controller(BookController::class)->group(function(){
+    Route::get('/Book','Book')->name('Book');
+});
+
+Route::controller(DashboardController::class)->group(function(){
+    Route::get('/Dashboard', 'getDashboard')->name('dashboard');
+});
 
 
