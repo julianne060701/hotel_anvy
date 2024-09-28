@@ -177,7 +177,21 @@ body {
     color: #666;
     margin-top: 10px;
 }
-/* Accommodation CS */
+
+/* Container Styling */
+.accommodation_area .container {
+    max-width: 1200px; /* Increased width for a larger container */
+    padding-left: 30px; /* Adjust padding for a more spacious layout */
+    padding-right: 30px;
+}
+
+@media (min-width: 1400px) {
+    .accommodation_area .container {
+        max-width: 1400px; /* Further increase the width on larger screens */
+    }
+}
+
+/* Accommodation CSS */
 .accommodation_item {
     background-color: #fff;
     border: 1px solid #e6e6e6;
@@ -202,7 +216,7 @@ body {
 
 .hotel_img img {
     width: 100%;
-    height: 200px;
+    height: 350px; /* Increase height images */
     object-fit: cover;
     transition: transform 0.3s ease;
 }
@@ -243,3 +257,47 @@ body {
     font-size: 0.8rem;
     color: #666;
 }
+
+
+.col-lg-4 {
+    width: 33.33%; /* Three columns instead of four */
+}
+/* Events Carousel */
+.event-title-wrapper {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+  
+  .title_color {
+    font-size: 2.5rem; /* Adjust title size */
+    font-weight: bold;
+    color: #333; /* Adjust color to your preference */
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Optional: Add some margin to the carousel itself */
+  #eventCarousel {
+    margin-top: 20px;
+  }
+  
+  .carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-caption h5 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.2rem;
+  }
+  
+  .carousel-indicators button {
+    background-color: #fff;
+  }
+  
+  

@@ -60,6 +60,7 @@ Route::controller(LoyaltyController::class)->group(function(){
 
 Route::controller(AdminRoomController::class)->group(function(){
     Route::get('/Rooms','displayAdminRoom')->name('Rooms');
+    Route::post('/newRoom', 'addNewRoom')->name('newRoom');
 });
 
 Route::controller(AdminMenuController::class)->group(function(){
@@ -81,7 +82,7 @@ Route::controller(UserManagementController::class)->group(function(){
 });
 
 Route::controller(AuthController::class)->group(function(){
-    Route::get('/Login', 'getSampleLoginView')->name('SLogin');
+    Route::get('/login', 'getSampleLoginView')->name('SLogin');
     Route::post('loginPost', 'loginPost')->name('loginPost');
 });
 

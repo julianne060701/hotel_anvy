@@ -156,7 +156,7 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="resources/dist/css/adminlte.min.css">
 
-  
+
 @yield('scripts');
 <script>
   $(function () {

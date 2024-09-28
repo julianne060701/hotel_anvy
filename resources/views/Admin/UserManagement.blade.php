@@ -44,7 +44,7 @@
                                         <button class="btn btn-primary" title="Edit">
                                             <i class="fas fa-edit"></i>
                                         </button>
-                              
+
                                         <button class="btn btn-danger" title="Delete">
                                             <i class="fas fa-trash"></i>
                                         </button>

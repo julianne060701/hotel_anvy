@@ -1,6 +1,6 @@
 @extends('Admin.layout.app')
 
-@section('title', 'Admin Anvy')
+@section('title', 'Rooms')
 
 @section('Navbar')
 @include('Admin.components.Navbar')
@@ -18,57 +18,41 @@
 <div class="card">
     <div class="card-body">
         <div class="d-flex justify-content-end mb-3">
-            <a href="#" class="btn btn-primary" data-bs-toggle="modal" id="add_btn" data-bs-target="#addRoomModal">Add
-                Room</a>
-
+                <button class="btn btn-primary" data-bs-toggle="modal" id="add_btn" data-bs-target="#addRoomModal" style="width: 25%" id="add_btn">Room</button>
         </div>
 
-        <!-- Room  Table -->
-        <table id="example1" class="table table-bordered table-striped">
+        <table id="example1" class="display nowrap" style="width:100%">
             <thead>
                 <tr>
                     <th>Room Number</th>
                     <th>Room Type</th>
+                    <th>Bed</th>
                     <th>Capacity</th>
                     <th>Price per Night</th>
                     <th>Status</th>
                     <th>Action</th>
+                    <th class="d-none">ID</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>101</td>
-                    <td>Deluxe</td>
-                    <td>2</td>
-                    <td>$120</td>
-                    <td>Available</td>
+                @foreach ($Room as $r)
+                <tr class="text-center">
+                    <td>{{$r->room_number}}</td>
+                    <td>{{$r->room_type}}</td>
+                    <td>{{$r->getBedType->type}}</td>
+                    <td>{{$r->capacity}}</td>
+                    <td>{{$r->rate}}</td>
+                    <td>{{$r->Status}}</td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-primary">
-                            <i class="fas fa-pen"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-danger">
-                            <i class="bi bi-trash"></i>
-                        </a>
+                        <button class="btn btn-sm btn-primary btnView"><i class="fas fa-pen"></i></button>
+                        <button class="btn btn-sm btn-danger"> <i class="bi bi-trash"></i></i></button>
                     </td>
+                    <td class="d-none">{{$r->id}}</td>
                 </tr>
-                <tr>
-                    <td>102</td>
-                    <td>Suite</td>
-                    <td>4</td>
-                    <td>$200</td>
-                    <td>Booked</td>
-                    <td>
-                        <a href="#" class="btn btn-sm btn-primary">
-                            <i class="fas fa-pen"></i>
-                        </a>
-                        <a href="#" class="btn btn-sm btn-danger">
-                            <i class="bi bi-trash"></i>
-                        </a>
-                    </td>
-                </tr>
+                @endforeach
+
             </tbody>
         </table>
-
 
         <!-- Add Room Modal -->
         <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel"
@@ -83,6 +67,7 @@
                     </div>
                     <div class="modal-body">
                         <form id="UserAddForm">
+                            @csrf
                             <div class="row">
                                 <div class="col-6">
                                     <label for="roomNumber" class="form-label">Room Number</label>
@@ -123,6 +108,58 @@
             </div>
         </div>
 
+        <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title" id="modalTile"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="UserAddForm">
+                        @csrf
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="roomNumber" class="form-label">Room Number</label>
+                                <input type="text" class="form-control" id="room_Number" name="room_number" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="roomType" class="form-label">Room Type</label>
+                                <input type="text" class="form-control" id="room_Type" name="room_type" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="capacity" class="form-label">Capacity</label>
+                                <input type="number" class="form-control" id="Capacity_1" name="capacity" required>
+                            </div>
+                            <div class="col-6">
+                                <label for="price" class="form-label">Price per Night</label>
+                                <input type="text" class="form-control" id="Price_1" name="price_per_night" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="status" class="form-label">Status</label>
+                                <select class="form-control" id="status" name="status_1" required>
+                                    <option value="Available">Available</option>
+                                    <option value="Booked">Booked</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </div>
 </div>
 @endsection
@@ -141,5 +178,5 @@
 </script>
 
 
-<script src='resources/js/usermanagement.js'></script>
+<script src='resources/js/Room.js'></script>
 @endsection

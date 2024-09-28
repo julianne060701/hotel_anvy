@@ -7,8 +7,6 @@
 @endsection
 
 
-
-
 <body>
     <!--================Header Area =================-->
     @yield('Navbar')
@@ -87,43 +85,43 @@
         </div>
     </section>
     <!--================ Welcome Area  =================-->
-    <!--================ Accommodation Area  =================-->
-    <section class="accommodation_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Room and Suites</h2>
-                <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,</p>
+<!--================ Accommodation Area  =================-->
+<section class="accommodation_area section_gap">
+    <div class="container">
+        <div class="section_title text-center">
+            <h2 class="title_color">Room and Suites</h2>
+            <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,</p>
+        </div>
+        <div class="row mb_30">
+            <div class="col-lg-4 col-sm-6">
+                <div class="accommodation_item text-center">
+                    <div class="hotel_img">
+                        <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
+                        <a href="#" class="btn theme_btn button_hover">See Details</a>
+                    </div>
+                    <a href="#">
+                        <h4 class="sec_h4">Double Deluxe Room</h4>
+                    </a>
+                    <h5>₱250<small>/night</small></h5>
+                </div>
             </div>
-            <div class="row mb_30">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accommodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
-                            <a href="#" class="btn theme_btn button_hover">See Details</a>
-                        </div>
-                        <a href="#">
-                            <h4 class="sec_h4">Double Deluxe Room</h4>
-                        </a>
-                        <h5>₱250<small>/night</small></h5>
+            <div class="col-lg-4 col-sm-6">
+                <div class="accommodation_item text-center">
+                    <div class="hotel_img">
+                        <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
+                        <a href="#" class="btn theme_btn button_hover">See Details</a>
                     </div>
+                    <a href="#">
+                        <h4 class="sec_h4">Single Deluxe Room</h4>
+                    </a>
+                    <h5>₱200<small>/night</small></h5>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accommodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
-                            <a href="#" class="btn theme_btn button_hover">See Details </a>
-                        </div>
-                        <a href="#">
-                            <h4 class="sec_h4">Single Deluxe Room</h4>
-                        </a>
-                        <h5>₱200<small>/night</small></h5>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
-    <!--================ Accommodation Area  =================-->
+    </div>
+</section>
+<!--================ Accommodation Area  =================-->
+
 
     <!--================ Menu Area  =================-->
     <section class="latest_blog_area section_gap">
@@ -193,7 +191,7 @@
         </div>
         <div class="container">
             <div class="section_title text-center">
-                <h2 class="title_w">Events</h2>
+                <h2 class="title_w">Our Amenities</h2>
                 <p>Who are in extremely love with eco friendly system.</p>
             </div>
             <div class="row mb_30">
@@ -242,7 +240,57 @@
             </div>
         </div>
     </section>
+    <br>
     <!--================ Facilities Area  =================-->
+   <!--================ Event Area  =================-->
+<div class="event-title-wrapper text-center">
+  <h2 class="title_color">From our Events</h2>
+</div>
+
+<div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <!-- Carousel Inner -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="public/images/rooms/wedding.jpg" class="d-block w-100" alt="Event Image 1">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Event 1</h5>
+        <p>Description of Event 1.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="public/images/rooms/event2.jpg" class="d-block w-100" alt="Event Image 2">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Event 2</h5>
+        <p>Description of Event 2.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="public/images/rooms/event3.jpg" class="d-block w-100" alt="Event Image 3">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Event 3</h5>
+        <p>Description of Event 3.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!--================ Event Area  =================-->
+
 
     <!--================ About History Area  =================-->
     <section class="about_history_area section_gap">
@@ -314,10 +362,8 @@
     <!--================ End footer Area  =================-->
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- Required JavaScript -->
-
+ 
 
     <script type="text/javascript">
         $(function () {
