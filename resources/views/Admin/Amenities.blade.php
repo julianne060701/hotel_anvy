@@ -31,16 +31,18 @@
                 </tr>
             </thead>
             <tbody>
+               @foreach ($Amenity as $a)
                 <tr class="text-center">
-                    <td></td>
-                    <td> </td>
+                    <td>{{$a->amenity}}</td>
+                    <td>{{$a->created_at}}</td>
                     <td>
                         <button class="btn btn-sm btn-primary btnView" id="edit_btn"><i class="fas fa-pen"></i></button>
                         <!-- <button class="btn btn-info btnView"><i class="fas fa-pen"></i>Edit</button> -->
                         <button class="btn btn-sm btn-danger btnArchive"> <i class="bi bi-trash"></i></i></button>
                     </td>
-                    <td class="d-none"></td>
+                    <td class="d-none">{{$a->id}}</td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
          
