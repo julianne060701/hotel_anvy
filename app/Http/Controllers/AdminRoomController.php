@@ -88,7 +88,7 @@ class AdminRoomController extends Controller
            if($Room){
                echo 'success';
            }else{
-               echo 'Fail to update Room. Try Again.';
+               echo 'error';
            }
 
        }else{

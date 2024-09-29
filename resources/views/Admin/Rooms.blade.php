@@ -115,7 +115,7 @@
         </div>
         
    <!-- Modal for editing a room -->
-<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel"
+        <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -132,6 +132,7 @@
                             <div class="col-6">
                                 <label for="roomNumber" class="form-label">Room Number</label>
                                 <input type="text" class="form-control" id="room_Number" name="room_number" required>
+                                <input type="hidden" class="form-control" id="id" name="id" required>
                             </div>
                             <div class="col-6">
                                 <label for="roomType" class="form-label">Room Type</label>
@@ -151,7 +152,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <label for="status" class="form-label">Status</label>
-                                <select class="form-control" id="status" name="status_1" required>
+                                <select class="form-control" id="status_1" name="status_1" required>
                                     <option value="Available">Available</option>
                                     <option value="Booked">Booked</option>
                                 </select>
