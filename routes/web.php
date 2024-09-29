@@ -66,6 +66,7 @@ Route::controller(AdminRoomController::class)->group(function(){
 
 Route::controller(AdminBedController::class)->group(function(){
     Route::get('/Beds','displayAdminBed')->name('Beds');
+    Route::post('/updateBed', 'updateBed')->name('updateBed');
     Route::post('/newBed', 'addNewBed')->name('newBed');
 });
 
