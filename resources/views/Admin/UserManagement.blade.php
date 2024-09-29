@@ -20,10 +20,10 @@
             <div class="card">
                 <div class="card-body">
                     <div class="text-right">
-                        <button class="btn-success btn" style="width: 25%" id="add_btn">+ Add User</button>
+                        <button class="btn-success btn" style="width: 15%" id="add_btn">+ Add User</button>
                     </div>
                     <br>
-                    <table class="table table-striped" id="UserTable">
+                    <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
                                 <th>Name</th>

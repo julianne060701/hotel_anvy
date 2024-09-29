@@ -179,12 +179,6 @@
     </section>
     <!--================ Menu Area  =================-->
 
-    <!--================ Events Area  =================-->
-
-    
-
-    <!--================ Events Area  =================-->
-
     <!--================ facilities Area  =================-->
     <section class="facilities_area section_gap">
         <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
@@ -242,54 +236,33 @@
     </section>
     <br>
     <!--================ Facilities Area  =================-->
-   <!--================ Event Area  =================-->
-<div class="event-title-wrapper text-center">
-  <h2 class="title_color">From our Events</h2>
-</div>
-
-<div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#eventCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <!-- Carousel Inner -->
+    <div id="roomCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="public/images/rooms/wedding.jpg" class="d-block w-100" alt="Event Image 1">
+      <img src="public/images/rooms/room2.jpg" class="d-block w-100" alt="Deluxe Room">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Event 1</h5>
-        <p>Description of Event 1.</p>
+        <h5>Deluxe Room</h5>
+        <p>Each room has a private veranda with views of lush tropical gardens and a sofa bed...</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="public/images/rooms/event2.jpg" class="d-block w-100" alt="Event Image 2">
+      <img src="public/images/rooms/room3.jpg" class="d-block w-100" alt="Superior Room">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Event 2</h5>
-        <p>Description of Event 2.</p>
+        <h5>Superior Room</h5>
+        <p>This room is equipped with modern amenities, offering a comfortable stay...</p>
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="public/images/rooms/event3.jpg" class="d-block w-100" alt="Event Image 3">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Event 3</h5>
-        <p>Description of Event 3.</p>
-      </div>
-    </div>
+    <!-- Add more rooms here -->
   </div>
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<!--================ Event Area  =================-->
 
 
     <!--================ About History Area  =================-->
@@ -363,7 +336,22 @@
 
 
     <!-- Required JavaScript -->
- 
+ <script>
+    document.querySelectorAll('.thumbnail-item').forEach((item, index) => {
+  item.addEventListener('click', () => {
+    document.querySelector('#eventCarousel').carousel(index);
+    document.querySelectorAll('.thumbnail-item').forEach(thumb => thumb.classList.remove('active'));
+    item.classList.add('active');
+  });
+});
+
+document.querySelector('#eventCarousel').addEventListener('slid.bs.carousel', function () {
+  var index = document.querySelector('#eventCarousel .carousel-item.active').dataset.bsSlideTo;
+  document.querySelectorAll('.thumbnail-item').forEach(thumb => thumb.classList.remove('active'));
+  document.querySelectorAll('.thumbnail-item')[index].classList.add('active');
+});
+
+ </script>
 
     <script type="text/javascript">
         $(function () {

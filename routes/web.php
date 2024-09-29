@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminBookingController;
 use App\Http\Controllers\AdminLoyaltyCardController;
 use App\Http\Controllers\AdminMenuController;
 use App\Http\Controllers\AdminRoomController;
+use App\Http\Controllers\AdminBedController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\BookController;
@@ -61,6 +62,8 @@ Route::controller(LoyaltyController::class)->group(function(){
 Route::controller(AdminRoomController::class)->group(function(){
     Route::get('/Rooms','displayAdminRoom')->name('Rooms');
     Route::post('/newRoom', 'addNewRoom')->name('newRoom');
+    Route::post('/updateRoom', 'updateRoom')->name('updateRoom');
+
 });
 
 Route::controller(AdminMenuController::class)->group(function(){
@@ -102,5 +105,3 @@ Route::controller(BookController::class)->group(function(){
 Route::controller(DashboardController::class)->group(function(){
     Route::get('/Dashboard', 'getDashboard')->name('dashboard');
 });
-
-
