@@ -77,6 +77,7 @@ Route::controller(AdminBedController::class)->group(function(){
 Route::controller(AdminAmenitiesController::class)->group(function(){
     Route::get('/Amenities','displayAdminAmenities')->name('Amenities');
     Route::post('/newAmenity', 'addNewAmenity')->name('newAmenity');
+    Route::post('/updateAmenity', 'updateAmenity')->name('updateAmenity');
 });
 
 Route::controller(AdminMenuController::class)->group(function(){

@@ -82,18 +82,18 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
-                        <h5 class="modal-title" id="modalAddLabel">Edit Bed Type</h5>
+                        <h5 class="modal-title" id="modalAddLabel">Edit Amenity</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form id="BedEditForm">
+                        <form id="AmenityEditForm">
                             @csrf
                             <div class="row">
                                 <div class="col-12">
-                                    <label for="type" class="form-label">Bed Type</label>
-                                    <input type="text" class="form-control" id="type1" name="type" required>
+                                    <label for="type" class="form-label">Amenity</label>
+                                    <input type="text" class="form-control" id="amenity1" name="amenity" required>
                                     <input type="hidden" class="form-control" id="id" name="id" required>
                                 </div>
                             </div>

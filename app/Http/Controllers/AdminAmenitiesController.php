@@ -43,4 +43,34 @@ class AdminAmenitiesController extends Controller
             echo 'duplicate';
         }
     }
+
+    //EDIT AMENITY
+    public function updateAmenity(Request $request){
+        $request->validate([
+            'type',
+            'id'
+        ]);
+
+        //Find the id on the bed_type table
+        $exist = Amenities::where('id', $request->input('id'))->count();
+
+        if($exist > 0){
+            //Update the newly updated data
+
+            $Amenity = Amenities::where('id', $request->input('id'))->update([
+                'amenity' => $request->input('amenity')
+            ]);
+
+            //check if success
+            if($Amenity){
+                echo 'success';
+            }else{
+                echo 'Fail to update Amenity. Try Again.';
+            }
+
+        }else{
+            echo 'No Amenity found!';
+        }
+
+    }
 }
