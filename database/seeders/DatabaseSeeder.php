@@ -38,13 +38,13 @@ class DatabaseSeeder extends Seeder
         ]);
 */
 
-        /*User::create([
+        User::create([
             'email' => 'anvy@gmail.com',
             'password' => Hash::make('Anvy'),
             'user_level_id' => '1',
             'person_id' => '1'
         ]);
-        */
+        
 
         Room::create([
             'room_name' => 'Neil Mark Lami',

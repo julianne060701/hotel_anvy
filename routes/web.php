@@ -63,6 +63,8 @@ Route::controller(LoyaltyController::class)->group(function(){
 Route::controller(AdminRoomController::class)->group(function(){
     Route::get('/Rooms','displayAdminRoom')->name('Rooms');
     Route::post('/newRoom', 'addNewRoom')->name('newRoom');
+    Route::post('/updateRoom', 'updateRoom')->name('updateRoom');
+
 });
 
 Route::controller(AdminBedController::class)->group(function(){
@@ -116,5 +118,3 @@ Route::controller(BookController::class)->group(function(){
 Route::controller(DashboardController::class)->group(function(){
     Route::get('/Dashboard', 'getDashboard')->name('dashboard');
 });
-
-
