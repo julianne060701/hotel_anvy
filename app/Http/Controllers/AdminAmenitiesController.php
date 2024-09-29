@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AdminAmenitiesController extends Controller
 {
     public function displayAdminAmenities() {
-        $Amenity = Amenities::all();
+        $Amenity = Amenities::where('status', 'Available')->get();
 
         return view('Admin.Amenities',[
             'Amenity' => $Amenity
@@ -59,6 +59,35 @@ class AdminAmenitiesController extends Controller
 
             $Amenity = Amenities::where('id', $request->input('id'))->update([
                 'amenity' => $request->input('amenity')
+            ]);
+
+            //check if success
+            if($Amenity){
+                echo 'success';
+            }else{
+                echo 'Fail to update Amenity. Try Again.';
+            }
+
+        }else{
+            echo 'No Amenity found!';
+        }
+
+    }
+
+    //ARCHIVE AMENITY
+    public function archiveAmenity(Request $request){
+        $request->validate([
+            'id'
+        ]);
+
+        //Find the id on the bed_type table
+        $exist = Amenities::where('id', $request->input('id'))->count();
+
+        if($exist > 0){
+            //Update the newly updated data
+
+            $Amenity = Amenities::where('id', $request->input('id'))->update([
+                'status' => 'Not Available'
             ]);
 
             //check if success
