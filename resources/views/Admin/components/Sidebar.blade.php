@@ -83,7 +83,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="amenities.php" class="nav-link">
+                <a href="{{route('Amenities')}}" class="nav-link" id="amenities">
                   <i class="fas fa-concierge-bell"></i>
                   <p>Amenities </p>
                 </a>

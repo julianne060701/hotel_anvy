@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('bed__types', function (Blueprint $table) {
+        Schema::create('amenities', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('amenity');
             $table->string('status');
             $table->timestamps();
         });
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('bed__types');
+        Schema::dropIfExists('amenities');
     }
 };

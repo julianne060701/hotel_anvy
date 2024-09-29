@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminLoyaltyCardController;
 use App\Http\Controllers\AdminMenuController;
 use App\Http\Controllers\AdminRoomController;
 use App\Http\Controllers\AdminBedController;
+use App\Http\Controllers\AdminAmenitiesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\BookController;
@@ -69,6 +70,11 @@ Route::controller(AdminBedController::class)->group(function(){
     Route::post('/archiveBed', 'archiveBed')->name('archiveBed');
     Route::post('/updateBed', 'updateBed')->name('updateBed');
     Route::post('/newBed', 'addNewBed')->name('newBed');
+});
+
+Route::controller(AdminAmenitiesController::class)->group(function(){
+    Route::get('/Amenities','displayAdminAmenities')->name('Amenities');
+    Route::post('/newAmenity', 'addNewAmenity')->name('newAmenity');
 });
 
 Route::controller(AdminMenuController::class)->group(function(){
