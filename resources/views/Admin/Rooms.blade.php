@@ -42,14 +42,14 @@
                 <tr class="text-center">
                     <td>{{$r->room_number}}</td>
                     <td>{{$r->room_type}}</td>
-                    <td>{{$r->getBedType->type}}</td>
+                    <td></td>
                     <td>{{$r->capacity}}</td>
                     <td>{{$r->rate}}</td>
                     <td>{{$r->Status}}</td>
                     <td>
                     <button class="btn btn-sm btn-primary btnView" id="edit_btn"><i class="fas fa-pen"></i></button>
                         <!-- <button class="btn btn-info btnView"><i class="fas fa-pen"></i>Edit</button> -->
-                        <button class="btn btn-sm btn-danger"> <i class="bi bi-trash"></i></i></button>
+                        <button class="btn btn-sm btn-danger btnArchive"> <i class="bi bi-trash"></i></i></button>
                     </td>
                    
                     <td class="d-none">{{$r->id}}</td>
@@ -163,6 +163,36 @@
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Archive Modal -->
+        <div class="modal fade" id="modalArchive" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <h5 class="modal-title" id="modalAddLabel">Archive Room</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p> Are you sure you want to archive this room? </p>
+                        <form id="RoomArchiveForm">
+                            @csrf
+                            <div class="row">
+                                <div class="col-12">
+                                    <input type="hidden" class="form-control" id="archiveId" name="archiveId" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary">Confirm</button>
                             </div>
                         </form>
                     </div>

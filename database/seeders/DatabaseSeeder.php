@@ -61,7 +61,8 @@ class DatabaseSeeder extends Seeder
 
 
         Bed_Type::create([
-            'type' => 'Queen'
+            'type' => 'Queen',
+            'status' => 'Available'
         ]);
     }
 }

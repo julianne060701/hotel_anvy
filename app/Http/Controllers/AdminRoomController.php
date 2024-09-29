@@ -96,7 +96,36 @@ class AdminRoomController extends Controller
        }
 
    }
-       
+
+   //ARCHIVE BED
+   public function archiveRoom(Request $request){
+    $request->validate([
+        'id'
+    ]);
+
+    //Find the id on the bed_type table
+    $exist = Room::where('id', $request->input('id'))->count();
+
+    if($exist > 0){
+        //Update the newly updated data
+
+        $Room = Room::where('id', $request->input('id'))->update([
+            'status' => 'Not Available'
+        ]);
+
+        //check if success
+        if($Room){
+            echo 'success';
+        }else{
+            echo 'Fail to update Bed. Try Again.';
+        }
+
+    }else{
+        echo 'No Bed found!';
     }
+
+}
+       
+}
 
 
