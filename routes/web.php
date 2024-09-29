@@ -66,6 +66,13 @@ Route::controller(AdminRoomController::class)->group(function(){
 
 });
 
+Route::controller(AdminBedController::class)->group(function(){
+    Route::get('/Beds','displayAdminBed')->name('Beds');
+    Route::post('/archiveBed', 'archiveBed')->name('archiveBed');
+    Route::post('/updateBed', 'updateBed')->name('updateBed');
+    Route::post('/newBed', 'addNewBed')->name('newBed');
+});
+
 Route::controller(AdminMenuController::class)->group(function(){
     Route::get('/AdminMenu','AdminMenu')->name('AdminMenu');
 });
