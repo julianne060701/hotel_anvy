@@ -9,7 +9,7 @@ class AdminBedController extends Controller
 {
 
     public function displayAdminBed() {
-        $Bed = Bed_Type::all();
+        $Bed = Bed_Type::where('status', 'Available')->get();
 
         return view('Admin.Beds',[
             'Bed' => $Bed
@@ -30,7 +30,8 @@ class AdminBedController extends Controller
         if($exist <=0){
             //Add the data
             $BedNew = Bed_Type::create([
-                'type' => $request->input('type')
+                'type' => $request->input('type'),
+                'status' => 'Available'
             ]);
 
             if($BedNew){
@@ -40,7 +41,7 @@ class AdminBedController extends Controller
             }
 
         }else{
-            echo 'error';
+            echo 'duplicate';
         }
     }
 
@@ -59,6 +60,35 @@ class AdminBedController extends Controller
 
             $Bed = Bed_Type::where('id', $request->input('id'))->update([
                 'type' => $request->input('type')
+            ]);
+
+            //check if success
+            if($Bed){
+                echo 'success';
+            }else{
+                echo 'Fail to update Bed. Try Again.';
+            }
+
+        }else{
+            echo 'No Bed found!';
+        }
+
+    }
+
+    //ARCHIVE BED
+    public function archiveBed(Request $request){
+        $request->validate([
+            'id'
+        ]);
+
+        //Find the id on the bed_type table
+        $exist = Bed_Type::where('id', $request->input('id'))->count();
+
+        if($exist > 0){
+            //Update the newly updated data
+
+            $Bed = Bed_Type::where('id', $request->input('id'))->update([
+                'status' => 'Not Available'
             ]);
 
             //check if success
