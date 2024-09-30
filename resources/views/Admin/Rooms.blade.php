@@ -22,6 +22,7 @@
         Add New Room
     </button>
     
+    
         </div>
 
          <table id="example1" class="table table-bordered table-striped">
@@ -42,14 +43,15 @@
                 <tr class="text-center">
                     <td>{{$r->room_number}}</td>
                     <td>{{$r->room_type}}</td>
-                    <td></td>
+                    <td>{{$r->getBedType->type}}</td>
                     <td>{{$r->capacity}}</td>
                     <td>{{$r->rate}}</td>
                     <td>{{$r->Status}}</td>
                     <td>
-                    <button class="btn btn-sm btn-primary btnView" id="edit_btn"><i class="fas fa-pen"></i></button>
+                        <button class="btn btn-sm btn-info" id="view_btn"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-sm btn-primary btnView" id="edit_btn"><i class="fas fa-pen"></i></button>
                         <!-- <button class="btn btn-info btnView"><i class="fas fa-pen"></i>Edit</button> -->
-                        <button class="btn btn-sm btn-danger btnArchive"> <i class="bi bi-trash"></i></i></button>
+                        <button class="btn btn-sm btn-danger btnArchive"><i class="bi bi-trash"></i></button>
                     </td>
                    
                     <td class="d-none">{{$r->id}}</td>
@@ -59,6 +61,8 @@
             </tbody>
         </table>
        
+
+
 
         <!-- Add Room Modal -->
         <div class="modal fade" id="modalAdd" tabindex="-1" role="dialog" aria-labelledby="modalAddLabel"
@@ -115,7 +119,7 @@
         </div>
         
    <!-- Modal for editing a room -->
-        <div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel"
+<div class="modal fade" id="modalEdit" tabindex="-1" role="dialog" aria-labelledby="modalEditLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -132,7 +136,6 @@
                             <div class="col-6">
                                 <label for="roomNumber" class="form-label">Room Number</label>
                                 <input type="text" class="form-control" id="room_Number" name="room_number" required>
-                                <input type="hidden" class="form-control" id="id" name="id" required>
                             </div>
                             <div class="col-6">
                                 <label for="roomType" class="form-label">Room Type</label>
@@ -152,7 +155,7 @@
                         <div class="row">
                             <div class="col-6">
                                 <label for="status" class="form-label">Status</label>
-                                <select class="form-control" id="status_1" name="status_1" required>
+                                <select class="form-control" id="status" name="status_1" required>
                                     <option value="Available">Available</option>
                                     <option value="Booked">Booked</option>
                                 </select>
@@ -176,13 +179,13 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
-                        <h5 class="modal-title" id="modalAddLabel">Archive Room</h5>
+                        <h5 class="modal-title" id="modalAddLabel">Archive Room Type</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p> Are you sure you want to archive this room? </p>
+                        <p> Are you sure you want to archive this Room type? </p>
                         <form id="RoomArchiveForm">
                             @csrf
                             <div class="row">
@@ -200,6 +203,7 @@
             </div>
         </div>
 
+
     </div>
 </div>
 @endsection
@@ -209,7 +213,18 @@
 @include('Admin.components.Footer')
 @endsection
 
+<script>
+  $(function () {
+    //Initialize Select2 Elements
+    $('.select2').select2()
 
+    //Initialize Select2 Elements
+    $('.select2bs4').select2({
+      theme: 'bootstrap4'
+    })
+
+})
+</script>
 
 @section('scripts')
 <script>

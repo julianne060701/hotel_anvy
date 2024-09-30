@@ -52,7 +52,6 @@ $(document).ready(()=>{
         })
 
     })
-
     //Handles Editing
     $('#example1').on('click','.btnView', function(){
 
@@ -122,6 +121,7 @@ $(document).ready(()=>{
 
     })
 
+
     //Handles Adding
     $('#add_btn').on('click', ()=>{
 
@@ -175,5 +175,7 @@ $(document).ready(()=>{
             })
 
     })
+
+    
 
 })

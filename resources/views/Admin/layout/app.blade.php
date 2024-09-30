@@ -155,6 +155,8 @@
   <link rel="stylesheet" href="resources/plugins/fullcalendar/main.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="resources/dist/css/adminlte.min.css">
+<!-- Select2 -->
+<script src="resources/plugins/select2/js/select2.full.min.js"></script>
 
 
 @yield('scripts');

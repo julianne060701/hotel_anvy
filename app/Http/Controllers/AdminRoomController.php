@@ -97,13 +97,13 @@ class AdminRoomController extends Controller
 
    }
 
-   //ARCHIVE BED
+   //ARCHIVE ROOM
    public function archiveRoom(Request $request){
     $request->validate([
         'id'
     ]);
 
-    //Find the id on the bed_type table
+    //Find the id on the room table
     $exist = Room::where('id', $request->input('id'))->count();
 
     if($exist > 0){
@@ -117,11 +117,11 @@ class AdminRoomController extends Controller
         if($Room){
             echo 'success';
         }else{
-            echo 'Fail to update Bed. Try Again.';
+            echo 'Fail to update Room. Try Again.';
         }
 
     }else{
-        echo 'No Bed found!';
+        echo 'No Room found!';
     }
 
 }
