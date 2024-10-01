@@ -152,6 +152,15 @@
                                 <input class="form-control" id="connum_add" required>
                             </div>
                         </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label>Roles</label>
+                                <select class="form-control" id="newRole" name="newRole">
+                                    <option value=1>Admin</option>
+                                    <option value=2>Staff</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <button type="submit" class="btn btn-primary">Save changes</button>

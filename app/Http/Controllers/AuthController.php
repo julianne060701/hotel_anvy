@@ -25,4 +25,9 @@ class AuthController extends Controller
         };
         return redirect()->back()->withErrors(['username' => 'Login Failed']);
     }
+
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('index');
+    }
 }

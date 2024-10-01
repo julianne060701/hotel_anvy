@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Person;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserManagementController extends Controller
 {
@@ -59,7 +61,8 @@ class UserManagementController extends Controller
             'lname',
             'bday',
             'contactNum',
-            'Address'
+            'Address',
+            'UserRole'
         ]);
 
         //Check if existing
@@ -79,7 +82,23 @@ class UserManagementController extends Controller
             ]);
 
             if($Person){
-                echo 'success';
+
+                //Add user account
+                $addUser =User::create([
+                    'email' => $Person->fname . '@gmail.com',
+                    'password' => Hash::make($Person->lname),
+                    'user_level_id' => $request->input('UserRole'),
+                    'person_id' =>$Person->id
+                ]);
+
+                if($addUser){
+
+                    echo 'success';
+                }else{
+                    echo 'error';
+                }
+
+
             }else{
                 echo 'error';
             }
@@ -87,5 +106,7 @@ class UserManagementController extends Controller
         }else{
             echo 'error';
         }
+
+
     }
 }

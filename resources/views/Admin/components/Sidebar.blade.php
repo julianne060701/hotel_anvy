@@ -13,7 +13,7 @@
           <img src="resources/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Name Here</a>
+          <a href="#" class="d-block">{{$user_info['email']}}</a>
         </div>
       </div>
 
@@ -52,12 +52,17 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
+
+            @if ($user_info['role' ] == 1)
+            <li class="nav-item">
                 <a href="{{route('UserManagementView')}}" class="nav-link " id="user">
                   <i class="nav-icon fa-solid fa-user"></i>
                   <p>User</p>
                 </a>
               </li>
+            @endif
+
+
             </ul>
           </li>
 
@@ -143,9 +148,16 @@
                 </a>
               </li>
 
+
+
             </ul>
           </li>
-
+          <li class="nav-item">
+            <a href="{{route('logout')}}" class="nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Logiut</p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

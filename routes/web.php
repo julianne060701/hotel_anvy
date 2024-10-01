@@ -56,44 +56,44 @@ Route::controller(ProfileController::class)->group(function(){
     Route::get('/Profile','displayProfile')->name('Profile');
 });
 
-Route::controller(LoyaltyController::class)->group(function(){
+Route::controller(LoyaltyController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/LoyaltyCard','displayLoyaltyCard')->name('LoyaltyCard');
 });
 
-Route::controller(AdminRoomController::class)->group(function(){
+Route::controller(AdminRoomController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/Rooms','displayAdminRoom')->name('Rooms');
     Route::post('/newRoom', 'addNewRoom')->name('newRoom');
     Route::post('/updateRoom', 'updateRoom')->name('updateRoom');
     Route::post('/archiveRoom', 'archiveRoom')->name('archiveRoom');
 });
 
-Route::controller(AdminBedController::class)->group(function(){
+Route::controller(AdminBedController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/Beds','displayAdminBed')->name('Beds');
     Route::post('/archiveBed', 'archiveBed')->name('archiveBed');
     Route::post('/updateBed', 'updateBed')->name('updateBed');
     Route::post('/newBed', 'addNewBed')->name('newBed');
 });
 
-Route::controller(AdminAmenitiesController::class)->group(function(){
+Route::controller(AdminAmenitiesController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/Amenities','displayAdminAmenities')->name('Amenities');
     Route::post('/newAmenity', 'addNewAmenity')->name('newAmenity');
     Route::post('/updateAmenity', 'updateAmenity')->name('updateAmenity');
     Route::post('/archiveAmenity', 'archiveAmenity')->name('archiveAmenity');
 });
 
-Route::controller(AdminMenuController::class)->group(function(){
+Route::controller(AdminMenuController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/AdminMenu','AdminMenu')->name('AdminMenu');
 });
 
-Route::controller(AdminLoyaltyCardController::class)->group(function(){
+Route::controller(AdminLoyaltyCardController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/AdminLoyaltyCard','AdminLoyalty')->name('AdminLoyaltyCard');
 });
 
-Route::controller(AdminBookingController::class)->group(function(){
+Route::controller(AdminBookingController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/AdminBooking','AdminBooking')->name('AdminBooking');
 });
 
-Route::controller(UserManagementController::class)->group(function(){
+Route::controller(UserManagementController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/UserManagement', 'getUserManagementView')->name('UserManagementView');
     Route::post('/updateUser', 'updateUser')->name('updateUser');
     Route::post('/addUser', 'addUser')->name('addUser');
@@ -102,6 +102,7 @@ Route::controller(UserManagementController::class)->group(function(){
 Route::controller(AuthController::class)->group(function(){
     Route::get('/login', 'getSampleLoginView')->name('SLogin');
     Route::post('loginPost', 'loginPost')->name('loginPost');
+    Route::get('/logout', 'logout')->name('logout');
 });
 
 Route::controller(SignupController::class)->group(function(){
@@ -117,6 +118,6 @@ Route::controller(BookController::class)->group(function(){
     Route::get('/Book','Book')->name('Book');
 });
 
-Route::controller(DashboardController::class)->group(function(){
+Route::controller(DashboardController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/Dashboard', 'getDashboard')->name('dashboard');
 });

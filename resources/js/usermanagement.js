@@ -1,3 +1,4 @@
+
 $(document).ready(()=>{
 
 
@@ -108,7 +109,8 @@ $(document).ready(()=>{
                 lname : $('#lname_add').val(),
                 bday : $('#bday_add').val(),
                 contactNum : $('#connum_add').val(),
-                Address : $('#address_add').val()
+                Address : $('#address_add').val(),
+                UserRole: $('#newRole').val()
             }
 
             $.ajaxSetup({
