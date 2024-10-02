@@ -31,20 +31,15 @@
         <!-- Room Booking Form -->
         <div class="booking-form text-center">
             <h3>BOOK YOUR ROOM</h3>
-            <form class="form-inline justify-content-center align-items-center">
+            <form class="form-inline justify-content-center align-items-center booking-form-custom">
                 <input type="date" class="form-control mr-2" placeholder="Arrival Date">
                 <input type="date" class="form-control mr-2" placeholder="Departure Date">
-                <select class="form-control mr-2">
-                    <option selected>Select Adults</option>
-                    <option value="1">1 Adult</option>
-                    <option value="2">2 Adults</option> 
-                </select>
-                <select class="form-control mr-2">
-                    <option selected>Select Children</option>
-                    <option value="0">0 Children</option>
-                    <option value="1">1 Child</option>
-                    <option value="2">2 Children</option>
-                </select>
+
+                <div class="number-of-guests d-flex align-items-center mr-2">
+                    <input type="text" class="form-control guest-input mx-2" id="roomNumber" name="room_number"
+                        placeholder="Number of Guests" required>
+                </div>
+
                 <div class="d-flex align-items-center">
                     <select class="form-control mr-2">
                         <option selected>Number of Rooms</option>
@@ -55,12 +50,10 @@
                         onclick="location.href='{{ route('Availability') }}'">
                         Check Availability
                     </button>
-                    
                 </div>
             </form>
-
-
         </div>
+
     </section>
     <!--================Banner Area =================-->
 
@@ -85,42 +78,42 @@
         </div>
     </section>
     <!--================ Welcome Area  =================-->
-<!--================ Accommodation Area  =================-->
-<section class="accommodation_area section_gap">
-    <div class="container">
-        <div class="section_title text-center">
-            <h2 class="title_color">Room and Suites</h2>
-            <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,</p>
-        </div>
-        <div class="row mb_30">
-            <div class="col-lg-4 col-sm-6">
-                <div class="accommodation_item text-center">
-                    <div class="hotel_img">
-                        <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
-                        <a href="#" class="btn theme_btn button_hover">See Details</a>
+    <!--================ Accommodation Area  =================-->
+    <section class="accommodation_area section_gap">
+        <div class="container">
+            <div class="section_title text-center">
+                <h2 class="title_color">Room and Suites</h2>
+                <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,</p>
+            </div>
+            <div class="row mb_30">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="accommodation_item text-center">
+                        <div class="hotel_img">
+                            <img src="public/images/rooms/room1.jpg" alt="Double Deluxe Room">
+                            <a href="#" class="btn theme_btn button_hover">See Details</a>
+                        </div>
+                        <a href="#">
+                            <h4 class="sec_h4">Double Deluxe Room</h4>
+                        </a>
+                        <h5>₱250<small>/night</small></h5>
                     </div>
-                    <a href="#">
-                        <h4 class="sec_h4">Double Deluxe Room</h4>
-                    </a>
-                    <h5>₱250<small>/night</small></h5>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="accommodation_item text-center">
+                        <div class="hotel_img">
+                            <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
+                            <a href="#" class="btn theme_btn button_hover">See Details</a>
+                        </div>
+                        <a href="#">
+                            <h4 class="sec_h4">Single Deluxe Room</h4>
+                        </a>
+                        <h5>₱200<small>/night</small></h5>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <div class="accommodation_item text-center">
-                    <div class="hotel_img">
-                        <img src="public/images/rooms/room2.jpg" alt="Single Deluxe Room">
-                        <a href="#" class="btn theme_btn button_hover">See Details</a>
-                    </div>
-                    <a href="#">
-                        <h4 class="sec_h4">Single Deluxe Room</h4>
-                    </a>
-                    <h5>₱200<small>/night</small></h5>
-                </div>
-            </div>
         </div>
-    </div>
-</section>
-<!--================ Accommodation Area  =================-->
+    </section>
+    <!--================ Accommodation Area  =================-->
 
 
     <!--================ Menu Area  =================-->
@@ -235,34 +228,48 @@
         </div>
     </section>
     <br>
-    <!--================ Facilities Area  =================-->
-    <div id="roomCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="public/images/rooms/room2.jpg" class="d-block w-100" alt="Deluxe Room">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Deluxe Room</h5>
-        <p>Each room has a private veranda with views of lush tropical gardens and a sofa bed...</p>
-      </div>
+    <!--================ Event Area  =================-->
+    <div id="eventCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#eventCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#eventCarousel" data-slide-to="1"></li>
+            <li data-target="#eventCarousel" data-slide-to="2"></li>
+        </ol>
+        <h2 class="title_color">Event</h2>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="public/images/rooms/room2.jpg" class="d-block w-100" alt="Event 1">
+                <div class="carousel-caption">
+                    <h5>Swimming Pool</h5>
+                    <p>Relax and unwind in our spacious swimming pool area.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="public/images/rooms/room1.jpg" class="d-block w-100" alt="Event 2">
+                <div class="carousel-caption">
+                    <h5>Gym & Fitness Center</h5>
+                    <p>Our state-of-the-art fitness center is available 24/7.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="public/images/rooms/room2.jpg" class="d-block w-100" alt="Event 3">
+                <div class="carousel-caption">
+                    <h5>Spa & Wellness</h5>
+                    <p>Indulge in our luxurious spa treatments.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#eventCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#eventCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <div class="carousel-item">
-      <img src="public/images/rooms/room3.jpg" class="d-block w-100" alt="Superior Room">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Superior Room</h5>
-        <p>This room is equipped with modern amenities, offering a comfortable stay...</p>
-      </div>
-    </div>
-    <!-- Add more rooms here -->
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#roomCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#roomCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+
+    <!--================ Event Area  =================-->
 
 
     <!--================ About History Area  =================-->
@@ -335,24 +342,7 @@
     <!--================ End footer Area  =================-->
 
 
-    <!-- Required JavaScript -->
- <script>
-    document.querySelectorAll('.thumbnail-item').forEach((item, index) => {
-  item.addEventListener('click', () => {
-    document.querySelector('#eventCarousel').carousel(index);
-    document.querySelectorAll('.thumbnail-item').forEach(thumb => thumb.classList.remove('active'));
-    item.classList.add('active');
-  });
-});
-
-document.querySelector('#eventCarousel').addEventListener('slid.bs.carousel', function () {
-  var index = document.querySelector('#eventCarousel .carousel-item.active').dataset.bsSlideTo;
-  document.querySelectorAll('.thumbnail-item').forEach(thumb => thumb.classList.remove('active'));
-  document.querySelectorAll('.thumbnail-item')[index].classList.add('active');
-});
-
- </script>
-
+    <!-- Required JavaScript for calendar -->
     <script type="text/javascript">
         $(function () {
             $('#datetimepicker11').datetimepicker({

@@ -26,6 +26,7 @@
                 <tr>
                     <th>Bed Type</th>
                     <th>Date Added</th>
+                    <th>Status</th>
                     <th>Action</th>
                     <th class="d-none">ID</th>
                 </tr>
@@ -35,6 +36,7 @@
                 <tr class="text-center">
                     <td>{{$b->type}}</td>
                     <td>{{$b->created_at}}</td>
+                    <td>{{$b->status}}</td>
                     <td>
                         <button class="btn btn-sm btn-primary btnView" id="edit_btn"><i class="fas fa-pen"></i></button>
                         <!-- <button class="btn btn-info btnView"><i class="fas fa-pen"></i>Edit</button> -->

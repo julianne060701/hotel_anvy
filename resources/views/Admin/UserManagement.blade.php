@@ -20,7 +20,8 @@
             <div class="card">
                 <div class="card-body">
                     <div class="text-right">
-                        <button class="btn-success btn" style="width: 15%" id="add_btn">+ Add User</button>
+                        <button class="btn btn-primary" style="width: 15%" id="add_btn"> Add User</button>
+                        
                     </div>
                     <br>
                     <table id="example1" class="table table-bordered table-striped">
@@ -42,11 +43,11 @@
                                     <td>{{ $u->birthdate }}</td>
                                     <td>
                                         <button class="btn btn-primary" title="Edit">
-                                            <i class="fas fa-edit"></i>
+                                            <i class="fas fa-pen"></i>
                                         </button>
 
                                         <button class="btn btn-danger" title="Delete">
-                                            <i class="fas fa-trash"></i>
+                                            <i class="bi bi-trash"></i>
                                         </button>
                                     </td>
                                 </tr>

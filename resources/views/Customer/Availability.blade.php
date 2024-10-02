@@ -20,13 +20,14 @@
             <div class="page-cover text-center">
                 <h2 class="page-cover-tittle">BOOK YOUR ROOM</h2>
                 <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{route('index')}}">Home</a></li>
                     <li class="active">Room Availability</li>
                 </ol>
             </div>
         </div>
     </section>
     <!--================Breadcrumb Area =================-->
+ 
     <div class="container mt-5">
         <!-- Room Booking Form -->
         <div class="booking-form text-center">
@@ -34,17 +35,10 @@
             <form class="form-inline justify-content-center">
                 <input type="date" class="form-control mr-2" placeholder="Arrival Date">
                 <input type="date" class="form-control mr-2" placeholder="Departure Date">
-                <select class="form-control mr-2">
-                    <option selected>Select Adults</option>
-                    <option value="1">1 Adult</option>
-                    <option value="2">2 Adults</option>
-                </select>
-                <select class="form-control mr-2">
-                    <option selected>Select Children</option>
-                    <option value="0">0 Children</option>
-                    <option value="1">1 Child</option>
-                    <option value="2">2 Children</option>
-                </select>
+                <div class="number-of-guests d-flex align-items-center mr-2">
+                    <input type="text" class="form-control guest-input mx-2" id="roomNumber" name="room_number"
+                        placeholder="Number of Guests" required>
+                </div>
                 <select class="form-control mr-2">
                     <option selected>Number of Rooms</option>
                     <option value="1">1 Room</option>
@@ -54,88 +48,98 @@
             </form>
         </div>
 
-        <!-- Room Cards -->
-        <div class="row">
-            <!-- Room Card 1 -->
-            <div class="col-md-6">
-                <div class="room-card d-flex">
-                    <div class="room-image col-md-5">
-                        <img src="public/images/rooms/room2.jpg" alt="Room Image">
+        <!--================Room Cards =================-->
+        <h5 class="room-title">OUR AVAILABLE ROOM</h5>
+        <div class="container mt-5">
+            <div class="row room-list slide-up">
+                <!-- Room Card -->
+                <div class="col-md-12 mb-4">
+                    <div class="room-card d-flex">
+                        <div class="room-image position-relative">
+                            <img src="public/images/rooms/room1.jpg" alt="Deluxe Room Image" class="img-fluid">
+                            <span class="badge badge-info position-absolute">AVAILABLE</span>
+                        </div>
+                        <div class="room-info pl-4">
+                            <h5 class="room-title">Deluxe Single/Double Room with Pool and Seaview</h5>
+                            <p>This 40m² deluxe room offers a spacious and inviting patio...</p>
+                            <p><strong>Amenities:</strong></p>
+                            <p class="amenities">
+                                <i class="fas fa-user"></i> Sleeps 2 &nbsp;
+                                <i class="fas fa-swimming-pool"></i> Pool Access &nbsp;
+                                <i class="fas fa-wifi"></i> Free Wifi &nbsp;
+                                <i class="fas fa-coffee"></i> Complimentary Breakfast
+                            </p>
+
+                            <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
+                                <span class="room-price">1,500 Per Night</span>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="room-info col-md-7">
-                        <h5 class="room-title">Deluxe Room</h5>
-                        <p>Sleeps 3 | 1 King Bed | 41 to 46 m²</p>
-                        <p>Refreshed rooms with picture window views and one or two-bed options.</p>
-                        <a href="#" class="text-muted">Room details</a>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="room-price">₱12,400</span>
-                            <a href="{{ route('Book') }}" class="btn booking-button">Book Now</a> 
+                </div>
+            </div>
+            <!-- Room 2 -->
+            <div class="row room-list slide-up">
+                <!-- Room Card -->
+                <div class="col-md-12 mb-4">
+                    <div class="room-card d-flex">
+                        <div class="room-image position-relative">
+                            <img src="public/images/rooms/room2.jpg" alt="Deluxe Room Image" class="img-fluid">
+                            <span class="badge badge-info position-absolute">AVAILABLE</span>
+                        </div>
+                        <div class="room-info pl-4">
+                            <h5 class="room-title">Deluxe Single/Double Room with Pool and Seaview</h5>
+                            <p>This 40m² deluxe room offers a spacious and inviting patio...</p>
+                            <p><strong>Amenities:</strong></p>
+                            <p class="amenities">
+                                <i class="fas fa-user"></i> Sleeps 2 &nbsp;
+                                <i class="fas fa-swimming-pool"></i> Pool Access &nbsp;
+                                <i class="fas fa-wifi"></i> Free Wifi &nbsp;
+                                <i class="fas fa-coffee"></i> Complimentary Breakfast
+                            </p>
+
+                            <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
+                                <span class="room-price">1,500 Per Night</span>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- Room 3 -->
+             <div class="row room-list slide-up">
+                <!-- Room Card -->
+                <div class="col-md-12 mb-4">
+                    <div class="room-card d-flex">
+                        <div class="room-image position-relative">
+                            <img src="public/images/rooms/event3.jpg" alt="Deluxe Room Image" class="img-fluid">
+                            <span class="badge badge-info position-absolute">NOT AVAILABLE</span>
+                        </div>
+                        <div class="room-info pl-4">
+                            <h5 class="room-title">Deluxe Single/Double Room with Pool and Seaview</h5>
+                            <p>This 40m² deluxe room offers a spacious and inviting patio...</p>
+                            <p><strong>Amenities:</strong></p>
+                            <p class="amenities">
+                                <i class="fas fa-user"></i> Sleeps 2 &nbsp;
+                                <i class="fas fa-swimming-pool"></i> Pool Access &nbsp;
+                                <i class="fas fa-wifi"></i> Free Wifi &nbsp;
+                                <i class="fas fa-coffee"></i> Complimentary Breakfast
+                            </p>
+
+                            <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
+                                <span class="room-price">1,500 Per Night</span>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Room Card 2 -->
-            <div class="col-md-6">
-                <div class="room-card d-flex">
-                    <div class="room-image col-md-5">
-                        <img src="public/images/rooms/room1.jpg" alt="Room Image">
-                    </div>
-                    <div class="room-info col-md-7">
-                        <h5 class="room-title">Deluxe Room</h5>
-                        <p>Sleeps 3 | 1 King Bed | 41 to 46 m²</p>
-                        <p>Refreshed rooms with picture window views and one or two-bed options.</p>
-                        <a href="#" class="text-muted">Room details</a>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="room-price">₱12,400</span>
-                            <a href="{{ route('Book') }}" class="btn booking-button">Book Now</a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Room Card 3 -->
-            <div class="col-md-6">
-                <div class="room-card d-flex">
-                    <div class="room-image col-md-5">
-                        <img src="public/images/rooms/room2.jpg" alt="Room Image">
-                    </div>
-                    <div class="room-info col-md-7">
-                        <h5 class="room-title">Deluxe Room</h5>
-                        <p>Sleeps 3 | 1 King Bed | 41 to 46 m²</p>
-                        <p>Refreshed rooms with picture window views and one or two-bed options.</p>
-                        <a href="#" class="text-muted">Room details</a>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="room-price">₱12,400</span>
-                            <a href="{{ route('Book') }}" class="btn booking-button">Book Now</a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Room Card 4 -->
-            <div class="col-md-6">
-                <div class="room-card d-flex">
-                    <div class="room-image col-md-5">
-                        <img src="public/images/rooms/room2.jpg" alt="Room Image">
-                    </div>
-                    <div class="room-info col-md-7">
-                        <h5 class="room-title">Deluxe Room</h5>
-                        <p>Sleeps 3 | 1 King Bed | 41 to 46 m²</p>
-                        <p>Refreshed rooms with picture window views and one or two-bed options.</p>
-                        <a href="#" class="text-muted">Room details</a>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="room-price">₱12,400</span>
-                            <a href="{{ route('Book') }}" class="btn booking-button">Book Now</a> 
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
-    <!--================Footer Area =================-->
-    @yield('Footer')
+        <!--================Footer Area =================-->
+        @yield('Footer')
 
 </body>
 
