@@ -15,6 +15,11 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HelloWorldController;
+use App\Http\Controllers\LandingAboutUsController;
+use App\Http\Controllers\LandingAvailabilityController;
+use App\Http\Controllers\LandingContactUsController;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\LandingRoomController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LoyaltyController;
 use App\Http\Controllers\ProfileController;
@@ -113,7 +118,6 @@ Route::controller(AuthController::class)->group(function(){
 
 Route::controller(SignupController::class)->group(function(){
     Route::get('/SampleSignup','Signup')->name('SampleSignup');
-
 });
 
 Route::controller(AvailabilityController::class)->group(function(){
@@ -130,4 +134,25 @@ Route::controller(CartController::class)->group(function(){
 
 Route::controller(DashboardController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){
     Route::get('/Dashboard', 'getDashboard')->name('dashboard');
+});
+
+// Landing Page Route
+Route::controller(LandingPageController::class)->group(function(){
+    Route::get('/LandingPage', 'Landingindex')->name('LandingPage');
+});
+
+Route::controller(LandingAvailabilityController::class)->group(function(){
+    Route::get('/LandingAvailability', 'displayLandingAvailability')->name('LandingAvailability');
+});
+
+Route::controller(LandingRoomController::class)->group(function(){
+    Route::get('/LandingRoom', 'displayLandingRoom')->name('LandingRoom');
+});
+
+Route::controller(LandingContactUsController::class)->group(function(){
+    Route::get('/LandingContactUs', 'displayLandingContact')->name('LandingContactUs');
+});
+
+Route::controller(LandingAboutUsController::class)->group(function(){
+    Route::get('/LandingAboutUs', 'displayLandingAbout')->name('LandingAboutUs');
 });
