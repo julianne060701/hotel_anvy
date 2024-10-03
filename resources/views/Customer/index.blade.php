@@ -41,11 +41,6 @@
                 </div>
 
                 <div class="d-flex align-items-center">
-                    <select class="form-control mr-2">
-                        <option selected>Number of Rooms</option>
-                        <option value="1">1 Room</option>
-                        <option value="2">2 Rooms</option>
-                    </select>
                     <button class="book_now_btn button_hover btn" type="button"
                         onclick="location.href='{{ route('Availability') }}'">
                         Check Availability

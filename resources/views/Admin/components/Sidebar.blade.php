@@ -1,8 +1,8 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="resources/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Anvy Resort</span>
+    <a href="{{route('dashboard')}}" class="brand-link">
+      <img src="resources/dist/img/adminLogo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Anvy Resort Admin</span>
     </a>
 
     <!-- Sidebar -->
@@ -13,7 +13,7 @@
           <img src="resources/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">{{$user_info['email']}}</a>
+          <a href="{{route('AdminProfile')}}" id="adminprofile" class="d-block">{{$user_info['email']}} </a>
         </div>
       </div>
 

@@ -4,12 +4,14 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AdminBookingController;
 use App\Http\Controllers\AdminLoyaltyCardController;
 use App\Http\Controllers\AdminMenuController;
+use App\Http\Controllers\AdminProfileController;
 use App\Http\Controllers\AdminRoomController;
 use App\Http\Controllers\AdminBedController;
 use App\Http\Controllers\AdminAmenitiesController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HelloWorldController;
@@ -38,6 +40,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(IndexController::class)->group(function(){
     Route::get('/', 'index')->name('index');
+});
+
+Route::controller(AdminProfileController::class)->group(function(){
+    Route::get('/AdminProfile', 'displayAdminProfile')->name('AdminProfile');
 });
 
 Route::controller(RoomController::class)->group(function(){
@@ -116,6 +122,10 @@ Route::controller(AvailabilityController::class)->group(function(){
 
 Route::controller(BookController::class)->group(function(){
     Route::get('/Book','Book')->name('Book');
+});
+
+Route::controller(CartController::class)->group(function(){
+    Route::get('/Cart', 'displayCart')->name('Cart');
 });
 
 Route::controller(DashboardController::class)->middleware('userRole: 1')->middleware('auth')->group(function(){

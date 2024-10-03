@@ -30,24 +30,26 @@
  
     <div class="container mt-5">
         <!-- Room Booking Form -->
-        <div class="booking-form text-center">
-
-            <form class="form-inline justify-content-center">
+           <!-- Room Booking Form -->
+           <div class="booking-form text-center">
+            <h3>BOOK YOUR ROOM</h3>
+            <form class="form-inline justify-content-center align-items-center booking-form-custom">
                 <input type="date" class="form-control mr-2" placeholder="Arrival Date">
                 <input type="date" class="form-control mr-2" placeholder="Departure Date">
+
                 <div class="number-of-guests d-flex align-items-center mr-2">
                     <input type="text" class="form-control guest-input mx-2" id="roomNumber" name="room_number"
                         placeholder="Number of Guests" required>
                 </div>
-                <select class="form-control mr-2">
-                    <option selected>Number of Rooms</option>
-                    <option value="1">1 Room</option>
-                    <option value="2">2 Rooms</option>
-                </select>
-                <button type="submit" class="btn check-btn">CHECK AVAILABILITY</button>
+
+                <div class="d-flex align-items-center">
+                    <button class="book_now_btn button_hover btn" type="button"
+                        onclick="location.href='{{ route('Availability') }}'">
+                        Check Availability
+                    </button>
+                </div>
             </form>
         </div>
-
         <!--================Room Cards =================-->
         <h5 class="room-title">OUR AVAILABLE ROOM</h5>
         <div class="container mt-5">
@@ -72,7 +74,7 @@
 
                             <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
                                 <span class="room-price">1,500 Per Night</span>
-                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +102,7 @@
 
                             <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
                                 <span class="room-price">1,500 Per Night</span>
-                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Add to cart</a>
                             </div>
                         </div>
                     </div>
@@ -128,7 +130,7 @@
 
                             <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
                                 <span class="room-price">1,500 Per Night</span>
-                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Add to cart</a>
                             </div>
                         </div>
                     </div>

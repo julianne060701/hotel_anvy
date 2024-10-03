@@ -40,6 +40,7 @@
   <link rel="stylesheet" href="resources/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="resources/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="{{ url('resources/css/profile.css') }}">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">

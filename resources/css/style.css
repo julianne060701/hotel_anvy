@@ -3560,4 +3560,26 @@ h1, h2, h3, h4, h5, h6 {
 
 /*---------------------------------------------------- */
 
+/* Cart CSS */
+.ui-w-40 {
+  width: 180px !important;
+  height: auto;
+}
+
+.card{
+  box-shadow: 0 1px 15px 1px rgba(52,40,104,.08);    
+}
+
+.ui-product-color {
+  display: inline-block;
+  overflow: hidden;
+  margin: .144em;
+  width: .875rem;
+  height: .875rem;
+  border-radius: 10rem;
+  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+  vertical-align: middle;
+}
+
 /*# sourceMappingURL=style.css.map */

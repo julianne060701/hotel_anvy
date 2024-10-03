@@ -1,42 +1,24 @@
-@extends('Customer.layout.app')
+@extends('Admin.layout.app')
+@section('title', 'Admin Anvy')
 @section('Navbar')
-@include('Customer.components.Navbar')
+    @include('Admin.components.Navbar')
 @endsection
-@section('Footer')
-@include('Customer.components.Footer')
+@section('Sidebar')
+    @include('Admin.components.Sidebar')
 @endsection
 
-<body>
-    <!--================Navigation Area =================-->
-    @yield('Navbar')
+@section('Module', 'Profile')
+@section('Header','Profile')
+@section('Details', 'Profile')
 
-    <!--================Breadcrumb Area =================-->
-    <section class="breadcrumb_area">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
-        </div>
-        <div class="container">
-            <div class="page-cover text-center">
-                <h2 class="page-cover-tittle">Profile</h2>
-                <ol class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="active">Profile</li>
-                </ol>
-            </div>
-        </div>
-    </section>
-    <!--================Breadcrumb Area =================-->
+@section('Content')
 
-    <div class="container">
-    <div class="main-body">
-    
-
-    
-          <div class="container-xl px-4 mt-4">
+<div class="container-xl px-4 mt-4">
     <!-- Account page navigation-->
     <nav class="nav nav-borders">
         <a class="nav-link active ms-0" href="https://www.bootdey.com/snippets/view/bs5-edit-profile-account-details" target="__blank">Profile</a>
         <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-billing-page" target="__blank">Billing</a>
-        <a class="nav-link" href="{{route('LoyaltyCard')}}">Loyalty Card</a>
+        <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-profile-security-page" target="__blank">Security</a>
         <a class="nav-link" href="https://www.bootdey.com/snippets/view/bs5-edit-notifications-page"  target="__blank">Notifications</a>
     </nav>
     <hr class="mt-0 mb-4">
@@ -104,20 +86,15 @@
     </div>
 </div>
 
+@endsection
 
+@section('scripts')
+<script>
+  $('#adminprofile').addClass('menu-open');
+  $('#adminprofile').addClass('active');
+</script>
+@endsection
 
-            </div>
-          </div>
-
-        </div>
-    </div>
-    @yield('Footer')
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
+@section('Footer')
+    @include('Admin.components.Footer')
+@endsection
