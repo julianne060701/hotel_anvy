@@ -74,7 +74,7 @@
 
                             <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
                                 <span class="room-price">1,500 Per Night</span>
-                                <a href="{{ route('Book') }}" class="btn btn-primary">Add to cart</a>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
 
                             <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
                                 <span class="room-price">1,500 Per Night</span>
-                                <a href="{{ route('Book') }}" class="btn btn-primary">Add to cart</a>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
 
                             <div class="info-price-booking d-flex align-items-center justify-content-between mt-2">
                                 <span class="room-price">1,500 Per Night</span>
-                                <a href="{{ route('Book') }}" class="btn btn-primary">Add to cart</a>
+                                <a href="{{ route('Book') }}" class="btn btn-primary">Book Now</a>
                             </div>
                         </div>
                     </div>
