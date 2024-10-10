@@ -46,11 +46,11 @@ class UserManagementController extends Controller
             if($Person){
                 echo 'success';
             }else{
-                echo 'error';
+                echo 'error1';
             }
 
         }else{
-            echo 'error';
+            echo 'error2';
         }
 
     }

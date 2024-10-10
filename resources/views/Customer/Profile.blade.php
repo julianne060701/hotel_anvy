@@ -28,9 +28,9 @@
 
     <div class="container">
     <div class="main-body">
-    
 
-    
+
+
           <div class="container-xl px-4 mt-4">
     <!-- Account page navigation-->
     <nav class="nav nav-borders">
@@ -64,25 +64,25 @@
                         <!-- Form Group (username)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="inputUsername">Username</label>
-                            <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="username"readonly>
+                            <input class="form-control" id="inputUsername" type="text" placeholder="Enter your username" value="{{$user_info['email']}}"readonly>
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">
                             <!-- Form Group (first name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputFirstName">First name</label>
-                                <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="Valerie" readonly>
+                                <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" value="{{$user_credentials['fname']}}" readonly>
                             </div>
                             <!-- Form Group (last name)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputLastName">Last name</label>
-                                <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="Luna" readonly>
+                                <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" value="{{$user_credentials['lname']}}" readonly>
                             </div>
                         </div>
                         <!-- Form Group (email address)-->
                         <div class="mb-3">
                             <label class="small mb-1" for="inputEmailAddress">Email address</label>
-                            <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value="name@example.com"readonly>
+                            <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address" value={{$user_info['email']}} readonly>
                         </div>
                         <!-- Form Row-->
                         <div class="row gx-3 mb-3">

@@ -44,7 +44,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::controller(IndexController::class)->group(function(){
-    Route::get('/', 'index')->name('index');
+    Route::get('/UserPage', 'index')->name('index');
 });
 
 Route::controller(AdminProfileController::class)->group(function(){
@@ -63,7 +63,7 @@ Route::controller(ContactUsController::class)->group(function(){
     Route::get('/ContactUs', 'displayContact')->name('ContactUs');
 });
 
-Route::controller(ProfileController::class)->group(function(){
+Route::controller(ProfileController::class)->middleware('auth')->middleware('userRole: 3')->group(function(){
     Route::get('/Profile','displayProfile')->name('Profile');
 });
 
@@ -138,7 +138,7 @@ Route::controller(DashboardController::class)->middleware('userRole: 1')->middle
 
 // Landing Page Route
 Route::controller(LandingPageController::class)->group(function(){
-    Route::get('/LandingPage', 'Landingindex')->name('LandingPage');
+    Route::get('/', 'Landingindex')->name('LandingPage');
 });
 
 Route::controller(LandingAvailabilityController::class)->group(function(){

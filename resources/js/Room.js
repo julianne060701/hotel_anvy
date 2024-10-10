@@ -1,5 +1,7 @@
 $(document).ready(()=>{
 
+
+
     //Handles Archiving
     $('#example1').on('click','.btnArchive', function(){
 
@@ -54,7 +56,7 @@ $(document).ready(()=>{
     })
     //Handles Editing
     $('#example1').on('click','.btnView', function(){
-
+        //alert('ugh')
         $('#alert').addClass('d-none');
         $('#modalEdit').modal('show')
         $tr = $(this).closest('tr');
@@ -68,7 +70,7 @@ $(document).ready(()=>{
         $('#Capacity_1').val(data[3]);
         $('#Price_1').val(data[4]);
         $('#status_1').val(data[5]);
-        $('#id').val(data[7]);
+        $('#id_1').val(data[7]);
 
         $.ajaxSetup({
             headers: {
@@ -80,13 +82,13 @@ $(document).ready(()=>{
 
             e.preventDefault();
 
-            $id = $('#id').val();
+            $id = $('#id_1').val();
             $roomNumber = $('#room_Number').val();
             $roomType = $('#room_Type').val();
             $capacity = $('#Capacity_1').val();
             $price = $('#Price_1').val();
             $status = $('#status_1').val();
-            $id = $('#id').val();
+            $id = $('#id_1').val();
 
             $.ajaxSetup({
                 headers: {

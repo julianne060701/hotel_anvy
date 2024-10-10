@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Person;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -28,9 +29,15 @@ class UserInfoMiddleware
                 'person_id' => $Account->person_id
             ];
 
+            $UserCredentials = Person::where('id', $Account->person_id)->first();
+
+
+
             View::share('user_info', $userInfo);
+            View::share('user_credentials', $UserCredentials->toArray());
 
              $request->merge(['user_info' => $userInfo]);
+             $request->merge(['user_credentials'=> $UserCredentials]);
 
        }
 

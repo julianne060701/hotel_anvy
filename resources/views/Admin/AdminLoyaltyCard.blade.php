@@ -39,12 +39,12 @@
                     <td>Win 95+</td>
                     <td>4</td>
                     <td>
-                
+
                         <a href="#" class="btn btn-sm btn-primary">
-                        <i class="fas fa-pen"></i> 
+                        <i class="fas fa-pen"></i>
                         </a>
                         <a href="#" class="btn btn-sm btn-danger">
-                            <i class="bi bi-trash"></i> 
+                            <i class="bi bi-trash"></i>
                         </a>
                     </td>
                 </tr>
@@ -55,14 +55,14 @@
                     <td>5</td>
                     <td>
                         <a href="#" class="btn btn-sm btn-primary">
-                        <i class="fas fa-pen"></i> 
+                        <i class="fas fa-pen"></i>
                         </a>
                         <a href="#" class="btn btn-sm btn-danger">
                             <i class="bi bi-trash"></i>
                         </a>
                     </td>
                 </tr>
-               
+
             </tbody>
         </table>
     </div>

@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <div class="text-right">
                         <button class="btn btn-primary" style="width: 15%" id="add_btn"> Add User</button>
-                        
+
                     </div>
                     <br>
                     <table id="example1" class="table table-bordered table-striped">
@@ -32,6 +32,7 @@
                                 <th>Address</th>
                                 <th>Birthdate</th>
                                 <th>Action</th>
+                                <th class="d-none">ID</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,14 +43,15 @@
                                     <td>{{ $u->address }}</td>
                                     <td>{{ $u->birthdate }}</td>
                                     <td>
-                                        <button class="btn btn-primary" title="Edit">
+                                        <button class="btn btn-primary btnEdit" title="Edit">
                                             <i class="fas fa-pen"></i>
                                         </button>
 
-                                        <button class="btn btn-danger" title="Delete">
+                                        <button class="btn btn-danger btn_delete" title="Delete">
                                             <i class="bi bi-trash"></i>
                                         </button>
                                     </td>
+                                    <td class="d-none">{{$u->id}}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -65,6 +67,7 @@
             <div class="modal-content">
                 <div class="modal-header bg-primary">
                     <h5 class="modal-title" id="modalEditLabel">Edit User</h5>
+                    <input class="d-none" id="id-holder">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

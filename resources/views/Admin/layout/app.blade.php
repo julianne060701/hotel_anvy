@@ -164,6 +164,7 @@
 <script>
   $(function () {
     $("#example1").DataTable({
+        scrollY: true,
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
