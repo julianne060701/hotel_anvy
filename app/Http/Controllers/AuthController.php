@@ -21,13 +21,21 @@ class AuthController extends Controller
         $remember = $request->has('remember');
 
         if(Auth::attempt($credentials, $remember)){
-            return redirect()->route('dashboard');
+
+            $user = Auth::user();
+
+            if($user->user_level_id == 3){
+                return redirect()->route('index');
+            }else{
+                return redirect()->route('dashboard');
+            }
+
         };
         return redirect()->back()->withErrors(['username' => 'Login Failed']);
     }
 
     public function logout(){
         Auth::logout();
-        return redirect()->route('index');
+        return redirect()->route('LandingPage');
     }
 }

@@ -50,7 +50,7 @@
                         <td>{{$r->Status}}</td>
                         <td>
                             <button class="btn btn-sm btn-info" id="view_btn"><i class="fas fa-eye"></i></button>
-                            <button class="btn btn-sm btn-primary btnView" id="edit_btn"><i class="fas fa-pen"></i></button>
+                            <button class="btn btn-sm btn-primary btnView"><i class="fas fa-pen"></i></button>
                             <button class="btn btn-sm btn-danger btnArchive"><i class="bi bi-trash"></i></button>
                         </td>
                         <td class="d-none">{{$r->id}}</td>
@@ -82,7 +82,7 @@
                                 <!-- <div class="col-6">
                                     <label for="bedType" class="form-label">Bed Type</label>
                                     <input type="text" class="form-control" id="bedtype" name="bed_type" required>
-                                </div> --> 
+                                </div> -->
                             </div>
                             <div class="row">
                                 <div class="col-6">
@@ -138,6 +138,7 @@
                     </div>
                     <div class="modal-body">
                         <form id="RoomEditForm">
+                            <input class="d-none" id="id_1">
                             @csrf
                             <div class="row">
                                 <div class="col-6">
@@ -164,8 +165,9 @@
                             <div class="row">
                                 <div class="col-6">
                                     <label for="status" class="form-label">Status</label>
-                                    <select class="form-control" id="status" name="status_1" required>
+                                    <select class="form-control" id="status_1" name="status_1" required>
                                         <option value="Available">Available</option>
+                                        <option value="Not Available">Not Available</option>
                                         <option value="Booked">Booked</option>
                                     </select>
                                 </div>
@@ -173,7 +175,7 @@
                                 <div class="col-6">
                                     <label for="bedType" class="form-label">Bed Type</label>
                                     <input type="text" class="form-control" id="bedtype" name="bed_type" required>
-                                </div> 
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
@@ -182,7 +184,7 @@
                                         required>
                                 </div>
                             </div>
-                            
+
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="submit" class="btn btn-primary">Save changes</button>

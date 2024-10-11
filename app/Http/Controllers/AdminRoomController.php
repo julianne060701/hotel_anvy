@@ -63,7 +63,8 @@ class AdminRoomController extends Controller
                 'room_type' ,
                 'capacity',
                 'price_per_night' ,
-                'status_1'
+                'status_1',
+                'id'
         ]);
 
        //Find the id on the bed_type table
@@ -125,7 +126,7 @@ class AdminRoomController extends Controller
     }
 
 }
-       
+
 }
 
 
