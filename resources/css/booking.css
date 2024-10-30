@@ -1,0 +1,139 @@
+/* General Container */
+.container2 {
+    max-width: 1200px; /* Expanded width for side-by-side layout */
+    display: flex; /* Flex layout for side-by-side display */
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Left Section: Guest Information */
+.form-section {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for form fields */
+    gap: 20px; /* Spacing between fields */
+    box-sizing: border-box;
+}
+
+/* Right Section: Order Summary */
+.order-summary {
+    width: 48%; /* Same width as form-section */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headers */
+.section2-header {
+    display: flex;
+    align-items: center;
+    grid-column: span 2; /* Full width */
+    margin-bottom: 10px;
+}
+
+.section2-header i {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 8px;
+}
+
+.section2-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+
+/* Form Groups */
+.form2-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Label Styling */
+.form2-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.form2-group input,
+.form2-group select,
+.form2-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Full Width Form Fields */
+.form2-group.full-width {
+    grid-column: span 2; /* Span both columns for larger fields */
+}
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    grid-column: span 2; /* Center button across both columns */
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+/* Bottom Buttons */
+.button-container2 {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.button-container2 .btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-container2 .btn-continue {
+    background-color: #6c757d;
+    color: white;
+}
+
+.button-container2 .btn-place-order {
+    background-color: #28a745;
+    color: white;
+}
+
+.button-container2 .btn-continue:hover {
+    background-color: #5a6268;
+}
+
+.button-container2 .btn-place-order:hover {
+    background-color: #218838;
+}

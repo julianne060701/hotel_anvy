@@ -1,0 +1,131 @@
+   /* Container */
+   .container1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Style for the navigation container */
+.nav2 {
+    display: flex;
+    border-bottom: 1px solid #ddd; /* Light border below the navigation */
+    padding-bottom: 5px;
+}
+
+/* Style for the navigation links */
+.nav2-link {
+    color: #ffffff; /* Light gray color for inactive links */
+    text-decoration: none;
+    margin-right: 15px;
+    padding: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* Style for the active link */
+.nav2-link.active {
+    color: #0d6efd; /* Blue color for the active link */
+    border-bottom: 2px solid #0d6efd; /* Blue underline for the active link */
+}
+
+
+/* Card Styles */
+.card1 {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.card1-header1 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #f7f9fa;
+    border-bottom: 1px solid #ddd;
+    color: #495057;
+}
+
+.card1-body {
+    padding: 20px;
+}
+
+/* Profile Picture Card */
+.img-account-profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Form Styles */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+label.small {
+    font-weight: bold;
+    color: #495057;
+}
+
+.mb-3, .mb-4 {
+    margin-bottom: 1rem !important;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Account Details Card */
+.card1-body1 {
+    padding: 20px;
+}
+
+/* Flex container for Profile Picture and Account Details */
+.profile-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 20px;
+    max-width: 800px; /* Set max width for the container */
+    margin: 0 auto;
+}
+
+.col-left, .col-right {
+    flex: 1;
+}
+
+.col-right {
+    flex: 2;
+}
+
+/* Adjust form input field width */
+.col-right .form-control {
+    width: 100%;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
